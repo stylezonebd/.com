@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111"><title>Style Zone Bd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--ink:#111;--muted:#777;--line:#e9e9e9;--paper:#fff;--soft:#f6f6f4;--accent:#c28a54;--radius:16px;--shadow:0 12px 35px rgba(0,0,0,.07)}*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,'Hind Siliguri',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.announcement{background:#111;color:#fff;text-align:center;padding:9px 12px;font-size:11px;letter-spacing:1.3px}.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);z-index:10}.nav{max-width:1240px;margin:auto;height:76px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#111;font-weight:800;letter-spacing:2px;font-size:22px}.brand img{width:42px;height:42px;object-fit:contain}.navlinks{display:flex;gap:28px}.navlinks a{font-size:12px;text-decoration:none;color:#222;font-weight:600;letter-spacing:.7px}.nav-actions{display:flex;gap:18px;align-items:center}.icon-btn{border:0;background:none;font-size:18px;color:#111;position:relative}.count{position:absolute;top:-8px;right:-9px;background:#111;color:#fff;border-radius:50%;font-size:10px;width:17px;height:17px;display:grid;place-items:center}.hero{max-width:1240px;margin:24px auto 48px;padding:0 22px}.hero-inner{background:#eee;min-height:360px;border-radius:4px;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;position:relative}.hero-copy{padding:62px 7%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(120deg,#f3f3f1,#e8e8e5)}.eyebrow{font-size:10px;letter-spacing:3px;font-weight:700;color:#777}.hero h1{font-size:clamp(35px,5vw,62px);line-height:1.05;letter-spacing:-2.5px;margin:18px 0 14px;max-width:520px}.hero p{color:#666;font-size:14px;line-height:1.8;max-width:390px}.primary{background:#111;color:#fff;border:1px solid #111;padding:14px 24px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:.2s}.primary:hover{background:#333}.hero-art{background:linear-gradient(145deg,#d7d7d3,#aaa9a3);display:grid;place-items:center;min-height:300px;overflow:hidden}.hero-art img{width:100%;height:100%;object-fit:cover}.hero-art .placeholder{font-size:100px;color:#777;opacity:.55}.benefits{max-width:1240px;margin:0 auto 55px;padding:0 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.benefit{border:1px solid var(--line);padding:18px;display:flex;align-items:center;gap:13px}.benefit i{font-size:20px}.benefit b{font-size:12px;display:block}.benefit span{font-size:10px;color:var(--muted)}.section{max-width:1240px;margin:0 auto 65px;padding:0 22px}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px}.section-head h2{font-size:26px;letter-spacing:-.8px;margin:6px 0}.section-head p{font-size:12px;color:var(--muted);margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid #ddd;background:white;padding:9px 15px;border-radius:30px;font-size:11px}.filter.active,.filter:hover{background:#111;color:#fff;border-color:#111}.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 16px}.product{min-width:0;cursor:pointer}.product-photo{background:#f3f3f1;aspect-ratio: .82;position:relative;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.product:hover .product-photo img{transform:scale(1.04)}.tag{position:absolute;top:12px;left:12px;background:#fff;padding:6px 9px;font-size:9px;letter-spacing:1px}.quick{position:absolute;bottom:12px;left:12px;right:12px;border:0;background:#fff;padding:12px;font-size:10px;font-weight:700;letter-spacing:1px;opacity:0;transform:translateY(6px);transition:.2s}.product:hover .quick{opacity:1;transform:none}.product-info{padding:12px 2px}.product-info h3{font-size:13px;margin:0 0 7px;font-weight:600}.price{font-size:13px;font-weight:700}.old{font-size:11px;color:#999;text-decoration:line-through;margin-left:6px;font-weight:400}.desc{font-size:11px;color:#888;margin-top:5px}.empty{grid-column:1/-1;text-align:center;padding:55px;color:#777}.footer{background:#111;color:#fff;padding:48px 22px 22px}.footer-inner{max-width:1240px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footer h3{letter-spacing:2px}.footer p,.footer a{color:#aaa;font-size:12px;line-height:1.9;text-decoration:none}.footer-bottom{max-width:1240px;margin:35px auto 0;padding-top:18px;border-top:1px solid #333;color:#777;font-size:10px}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;opacity:0;pointer-events:none;transition:.25s}.overlay.show{opacity:1;pointer-events:auto}.drawer{position:fixed;right:0;top:0;height:100%;width:min(460px,100%);background:#fff;z-index:31;transform:translateX(105%);transition:.3s;display:flex;flex-direction:column}.drawer.show{transform:none}.drawer-head{padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.drawer-head h3{margin:0;font-size:16px}.close{border:0;background:none;font-size:21px}.drawer-body{padding:20px;overflow:auto;flex:1}.cart-row{display:grid;grid-template-columns:76px 1fr auto;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.cart-row img{width:76px;height:90px;object-fit:cover;background:#eee}.cart-row h4{font-size:12px;margin:3px 0 7px}.cart-row p{font-size:11px;color:#777;margin:0 0 8px}.qty{display:flex;align-items:center;gap:10px}.qty button{width:24px;height:24px;background:#f2f2f2;border:0}.remove{border:0;background:none;color:#999}.drawer-foot{border-top:1px solid var(--line);padding:20px}.total-line{display:flex;justify-content:space-between;margin-bottom:14px;font-size:13px}.wide{width:100%}.modal{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:16px}.modal.show{display:flex}.modal-box{background:#fff;width:min(760px,100%);max-height:92vh;overflow:auto;position:relative}.modal-close{position:absolute;right:15px;top:12px;z-index:2;border:0;background:#fff;border-radius:50%;width:34px;height:34px;font-size:19px}.product-detail{display:grid;grid-template-columns:1fr 1fr}.detail-img{background:#f2f2f0;min-height:390px;position:relative;overflow:hidden}.detail-img img{width:100%;height:100%;min-height:390px;object-fit:cover}.detail-thumbs{display:flex;gap:9px;margin-top:12px;flex-wrap:wrap}.detail-thumb{width:62px;height:72px;padding:3px;border:1px solid #ddd;background:#fff;cursor:pointer;opacity:.72}.detail-thumb.active{border:2px solid #111;opacity:1}.detail-thumb img{width:100%;height:100%;object-fit:cover}.gallery-label{font-size:10px;color:#888;margin-top:8px;letter-spacing:.5px}.detail-copy{padding:42px 30px}.detail-copy h2{font-size:25px;margin:12px 0}.detail-copy p{font-size:13px;line-height:1.8;color:#777}.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.size{border:1px solid #ddd;background:#fff;padding:9px 13px;font-size:11px}.size.active{background:#111;color:#fff;border-color:#111}.form{padding:26px}.form h2{margin:0 0 6px}.form .sub{font-size:12px;color:#777;margin:0 0 20px}.field{margin-bottom:13px}.field label{display:block;font-size:11px;font-weight:600;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #ddd;outline:none;font-size:12px;background:#fff}.field input:focus,.field select:focus,.field textarea:focus{border-color:#111}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.pay-note{background:#f6f6f4;padding:13px;font-size:11px;line-height:1.8;margin:14px 0}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#111;color:#fff;padding:12px 18px;font-size:12px;z-index:60;opacity:0;transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.searchbar{display:flex;gap:8px;margin-bottom:18px}.searchbar input{flex:1;border:1px solid #ddd;padding:12px;font-size:12px}.loading{text-align:center;padding:50px;color:#777}
+
+/* Premium mobile-first finishing */
+.brand{gap:11px;letter-spacing:1.8px}.brand img{width:44px;height:44px;padding:3px;border-radius:12px;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.08);border:1px solid #eee}.brand span{font-size:21px;background:linear-gradient(110deg,#171717,#8b6848);-webkit-background-clip:text;background-clip:text;color:transparent}.top{box-shadow:0 5px 22px rgba(0,0,0,.035)}
+.hero-inner{border-radius:22px;box-shadow:0 18px 45px rgba(0,0,0,.07)}.hero-copy{background:linear-gradient(135deg,#fbfaf8,#eae6df)}.hero-art{background:linear-gradient(145deg,#eee9e2,#c9c0b4)}.primary{border-radius:8px;box-shadow:0 7px 18px rgba(0,0,0,.12)}
+.benefit{border-radius:13px;background:linear-gradient(145deg,#fff,#faf9f7);box-shadow:0 5px 18px rgba(0,0,0,.025)}.section-head h2{letter-spacing:-1px}.filter{border-radius:30px;transition:.2s}.products{gap:28px 18px}.product{border-radius:14px;overflow:hidden;transition:transform .25s,box-shadow .25s}.product:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(0,0,0,.08)}.product-photo{aspect-ratio:.78;border-radius:13px;background:linear-gradient(145deg,#f4f2ee,#e9e6e0)}.product-photo img{object-fit:cover}.tag{border-radius:30px;box-shadow:0 3px 12px rgba(0,0,0,.07)}.product-info{padding:13px 5px 4px}.product-info h3{font-size:13px;line-height:1.5}.price{font-size:14px}.quick{border-radius:8px}.footer{background:linear-gradient(135deg,#111,#29241f)}
+.modal-box{border-radius:20px;overflow:auto;box-shadow:0 25px 80px rgba(0,0,0,.25)}.detail-img{min-height:420px;background:#f4f1ec;border-radius:14px;margin:12px;touch-action:pan-y}.detail-img img{min-height:420px;object-fit:contain;user-select:none;-webkit-user-drag:none}.gallery-stage{position:relative}.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 4px 16px rgba(0,0,0,.14);z-index:2;font-size:15px;color:#111}.gallery-arrow.prev{left:22px}.gallery-arrow.next{right:22px}.gallery-count{position:absolute;bottom:17px;right:22px;padding:5px 10px;border-radius:30px;background:rgba(17,17,17,.72);color:#fff;font-size:10px;letter-spacing:.5px}.detail-thumbs{padding:0 12px 12px}.detail-thumb{width:68px;height:78px;border-radius:9px;overflow:hidden}.detail-copy{padding:42px 28px}.detail-copy h2{line-height:1.25}.size{border-radius:7px}.size.active{box-shadow:0 5px 14px rgba(0,0,0,.14)}
+.loading{display:flex;align-items:center;justify-content:center;gap:12px;min-height:180px;color:#777}.loading-spinner{width:27px;height:27px;border:3px solid #e8e3dc;border-top-color:#9b7651;border-radius:50%;animation:raSpin .8s linear infinite}@keyframes raSpin{to{transform:rotate(360deg)}}.skeleton-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.skeleton-card{height:300px;border-radius:13px;background:linear-gradient(100deg,#f2f0ed 20%,#faf9f7 38%,#f2f0ed 56%);background-size:200% 100%;animation:raShimmer 1.35s infinite}@keyframes raShimmer{to{background-position-x:-200%}}
+@media(max-width:850px){.products{gap:20px 13px}.detail-img,.detail-img img{min-height:350px}}
+@media(max-width:560px){.nav{height:66px}.brand{gap:8px;font-size:17px}.brand img{width:38px;height:38px}.brand span{font-size:18px}.nav-actions{gap:13px}.hero-inner{border-radius:16px}.hero-copy{padding:32px 23px}.hero h1{font-size:39px}.hero-art{min-height:205px}.benefit{border-radius:10px}.products{gap:17px 10px}.product{border-radius:11px}.product-photo{border-radius:10px;aspect-ratio:.76}.product-info{padding:10px 3px 3px}.product-info h3{font-size:11.5px}.price{font-size:12px}.quick{font-size:9px}.modal{padding:8px}.modal-box{border-radius:16px;max-height:94vh}.product-detail{grid-template-columns:1fr}.detail-img{min-height:290px;max-height:360px;margin:8px}.detail-img img{min-height:290px;max-height:360px}.detail-copy{padding:20px 22px 24px}.detail-copy h2{font-size:22px}.gallery-arrow{width:34px;height:34px}.gallery-arrow.prev{left:15px}.gallery-arrow.next{right:15px}.detail-thumbs{padding:0 8px 10px}.detail-thumb{width:58px;height:66px}.skeleton-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.skeleton-card{height:235px}}
+@media(max-width:850px){.navlinks{display:none}.hero-inner{grid-template-columns:1fr}.hero-copy{padding:42px 7%}.hero-art{min-height:220px}.products{grid-template-columns:repeat(3,minmax(0,1fr))}.footer-inner{grid-template-columns:1fr 1fr}.footer-inner>div:first-child{grid-column:1/-1}}
+@media(max-width:560px){.nav{height:64px;padding:0 15px}.brand{font-size:18px}.brand img{width:34px;height:34px}.hero{padding:0 12px;margin:14px auto 30px}.hero-inner{min-height:unset}.hero-copy{padding:34px 24px}.hero h1{font-size:42px}.hero-art{min-height:190px}.benefits{padding:0 12px;grid-template-columns:1fr;margin-bottom:40px}.benefit{padding:13px}.section{padding:0 12px;margin-bottom:45px}.section-head h2{font-size:22px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px}.product-info h3{font-size:12px}.quick{opacity:1;transform:none;padding:9px}.footer-inner{grid-template-columns:1fr}.footer-inner>div:first-child{grid-column:auto}.product-detail{grid-template-columns:1fr}.detail-img{min-height:260px;max-height:330px}.detail-copy{padding:24px}.two{grid-template-columns:1fr}.announcement{font-size:9px}}
+
+/* RongAura storefront refresh */
+:root{--site-bg:#fff;--hero-bg:#ffffff;--brand-accent:#b98b5b;--site-ink:#191714}
+body{background:var(--site-bg);color:var(--site-ink)}
+.announcement{display:flex;justify-content:center;align-items:center;gap:14px;background:linear-gradient(100deg,#171512,#51402e);padding:10px 14px;letter-spacing:.5px;font-size:11px}
+.announcement span{opacity:.95}.announcement button{border:1px solid rgba(255,255,255,.55);background:#fff;color:#211b14;border-radius:30px;padding:7px 15px;font-size:10px;font-weight:800;letter-spacing:.7px}
+.top{background:rgba(255,255,255,.96)}.nav{height:70px}.brand img{width:40px;height:40px}.brand span{font-size:20px}
+.navlinks{align-items:center;gap:22px}.navlinks a{padding:10px 2px;position:relative}.navlinks a:after{content:'';height:2px;background:var(--brand-accent);position:absolute;left:0;right:100%;bottom:3px;transition:.2s}.navlinks a:hover:after{right:0}
+.menu-toggle{display:none;border:0;background:#f4f1ec;border-radius:12px;width:40px;height:40px;color:#222;font-size:17px}
+.hero{margin:16px auto 32px}.hero-inner{min-height:270px;max-height:340px;grid-template-columns:1.08fr .92fr;border-radius:20px;background:var(--hero-bg)}.hero-copy{padding:35px 7%;background:var(--hero-bg)}.hero h1{font-size:clamp(31px,4vw,48px);margin:11px 0 8px;line-height:1.02}.hero p{font-size:12px;line-height:1.6;margin:0 0 13px}.eyebrow{font-size:9px;letter-spacing:2px}.hero-art{min-height:260px;background:var(--hero-bg)}.hero-art img{object-fit:cover}.hero .primary{padding:11px 19px;border-radius:30px;font-size:10px}
+.offer-ribbon{max-width:1240px;margin:0 auto 24px;padding:0 22px}.offer-ribbon-inner{border:1px solid #eadfce;background:linear-gradient(100deg,#fbf6ee,#f1e5d4);color:#443522;border-radius:14px;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}.offer-ribbon-inner strong{font-size:12px;letter-spacing:.4px}.offer-ribbon-inner small{font-size:10px;color:#77634c}.offer-ribbon-inner button{border:0;background:#2b241d;color:#fff;border-radius:30px;padding:9px 16px;font-size:10px;font-weight:700;white-space:nowrap}
+.benefits{margin-bottom:36px}.benefit{padding:14px 16px}.section{margin-bottom:48px}.section-head h2{font-size:24px}.loading{display:flex;flex-direction:column;align-items:center;gap:12px}.loading-spinner{width:30px;height:30px;border:3px solid #e9e2d8;border-top-color:#98734c;border-radius:50%;animation:raSpin .7s linear infinite}@keyframes raSpin{to{transform:rotate(360deg)}}
+@media(max-width:850px){.menu-toggle{display:inline-grid;place-items:center}.navlinks{display:none;position:absolute;left:12px;right:12px;top:calc(100% + 6px);background:#fff;border:1px solid #eee;border-radius:15px;padding:12px;box-shadow:0 15px 35px #0002;flex-direction:column;align-items:stretch;gap:2px}.navlinks.open{display:flex}.navlinks a{padding:12px;border-radius:9px}.navlinks a:hover{background:#f6f3ef}.hero-inner{grid-template-columns:1fr .85fr;min-height:230px}.hero-copy{padding:24px}.hero-art{min-height:230px}}
+@media(max-width:560px){.announcement{font-size:9px;padding:8px 10px}.announcement button{padding:6px 11px;font-size:9px}.nav{height:62px;padding:0 12px;gap:8px}.brand{gap:7px}.brand img{width:32px;height:32px}.brand span{font-size:16px}.nav-actions{gap:9px}.icon-btn{font-size:16px}.menu-toggle{width:35px;height:35px}.hero{margin:12px auto 17px;padding:0 12px}.hero-inner{grid-template-columns:1fr .82fr;min-height:170px;max-height:210px;border-radius:15px}.hero-copy{padding:15px 12px}.hero .eyebrow{font-size:7px;letter-spacing:1px}.hero h1{font-size:clamp(20px,6vw,29px);letter-spacing:-1px;margin:8px 0 5px}.hero p{font-size:9px;line-height:1.35;margin-bottom:8px}.hero .primary{font-size:8px;padding:8px 10px;letter-spacing:.4px}.hero-art{min-height:170px}.offer-ribbon{padding:0 12px;margin-bottom:17px}.offer-ribbon-inner{padding:9px 11px;border-radius:11px}.offer-ribbon-inner strong{font-size:10px}.offer-ribbon-inner small{font-size:8px}.offer-ribbon-inner button{padding:7px 10px;font-size:8px}.benefits{display:none}.section{padding:0 12px;margin-bottom:35px}.section-head h2{font-size:20px}}
+
+
+/* Requested storefront controls */
+.top .nav{position:relative;gap:14px}
+.top-search{display:flex;align-items:center;gap:9px;flex:1;max-width:390px;margin:0 auto;background:#f7f5f2;border:1px solid #eee6dc;border-radius:30px;padding:0 14px;height:40px;color:#8b765e}
+.top-search input{border:0;outline:0;background:transparent;width:100%;font-size:12px;color:#222}
+.menu-toggle{display:inline-grid;place-items:center;flex:0 0 40px;background:linear-gradient(145deg,#f8f3ec,#eee5d9);border:1px solid #e9dfd2;box-shadow:0 5px 14px #0000000b}
+.navlinks{z-index:15;border-radius:16px;box-shadow:0 18px 42px #0002}
+.price{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#fff8ee,#f2e4d1);border:1px solid #ead7bd;color:#5d4024;padding:7px 12px;border-radius:30px;box-shadow:0 4px 12px #6b492015}
+.product-info .price{margin-top:2px}
+.detail-copy .price{font-size:16px;padding:9px 15px}
+.quick{opacity:1;transform:none;border:1px solid #eee;border-radius:30px;box-shadow:0 4px 12px #00000012}
+.tracking-section{margin-top:10px}
+.tracking-section[hidden]{display:none!important}
+.tracking-section{max-width:760px;padding:0 16px;margin:18px auto 35px}
+.tracking-section .section-head{margin-bottom:10px}
+.tracking-section .section-head h2{font-size:19px;margin:3px 0}
+.tracking-section .section-head p{font-size:10px}
+.tracking-card{max-width:560px;padding:12px;border-radius:13px}
+.tracking-fields{grid-template-columns:1fr 1fr auto;gap:7px}
+.tracking-fields input{padding:9px 10px;font-size:11px}
+.tracking-fields .primary{padding:9px 12px;font-size:10px;letter-spacing:.5px}
+.tracking-result{font-size:11px;margin-top:8px}
+.benefits{margin:0 auto 36px;gap:10px}
+.benefit{padding:14px 15px;min-height:72px;transition:transform .2s,box-shadow .2s}
+.benefit:hover{transform:translateY(-2px);box-shadow:0 9px 22px #0000000c}
+.benefit i{width:36px;height:36px;display:grid;place-items:center;border-radius:12px;background:#f5eee5;color:#8b6848;font-size:16px}
+.price{font-size:12px;padding:6px 11px;border-radius:12px;background:linear-gradient(135deg,#fffaf2,#f0e2cf);border:1px solid #e8d4b8;box-shadow:0 3px 9px #6b492012}
+.product-info .price{margin-top:3px}
+.loading-skeleton{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.skeleton-card{overflow:hidden;border-radius:13px}
+.skeleton-image,.skeleton-line{background:linear-gradient(100deg,#f0efed 20%,#faf9f7 38%,#f0efed 56%);background-size:200% 100%;animation:shimmer 1.25s ease-in-out infinite}
+.skeleton-image{aspect-ratio:.78;border-radius:13px}
+.skeleton-line{height:10px;border-radius:8px;margin:12px 4px 0}
+.skeleton-line.short{width:55%;margin-top:8px}
+@keyframes shimmer{to{background-position:-200% 0}}
+@media(max-width:560px){
+ .benefits{grid-template-columns:1fr;gap:7px;margin:0 12px 27px;padding:0}
+ .benefit{padding:10px 12px;min-height:58px}
+ .benefit i{width:32px;height:32px;font-size:14px}
+ .benefit b{font-size:11px}.benefit span{font-size:9px}
+ .tracking-section{padding:0 12px;margin:12px auto 25px}
+ .tracking-card{padding:10px}
+ .tracking-fields{grid-template-columns:1fr 1fr}
+ .tracking-fields .primary{grid-column:1/-1}
+ .loading-skeleton{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+}
+.tracking-card{max-width:680px;border:1px solid #eee5da;background:linear-gradient(145deg,#fff,#faf7f2);border-radius:18px;padding:20px;box-shadow:0 10px 28px #00000008}
+.tracking-fields{display:grid;grid-template-columns:1fr 1fr auto;gap:10px}
+.tracking-fields input{min-width:0;border:1px solid #e4ddd4;border-radius:9px;padding:12px;font-size:12px;outline:none}
+.tracking-fields input:focus{border-color:#b98b5b}
+.tracking-fields .primary{border-radius:9px;padding:12px 16px;white-space:nowrap}
+.tracking-result{font-size:12px;margin-top:14px;line-height:1.8;color:#5d554c}
+.status-pill{display:inline-block;padding:6px 12px;border-radius:30px;font-weight:700;font-size:11px;background:#f0eee9;color:#514638}
+.status-confirmed{background:#e7f5eb;color:#21633a}.status-cancelled{background:#fff0ef;color:#a33a32}.status-pending{background:#fff4df;color:#8a5a12}
+#telegramChannelLink{margin-top:8px}#orderTracking{scroll-margin-top:90px}
+@media(max-width:560px){
+ .top .nav{gap:7px}.menu-toggle{flex-basis:35px;width:35px;height:35px}
+ .top-search{height:36px;padding:0 10px;max-width:none;min-width:70px}
+ .top-search input{font-size:10px}.brand{flex:0 0 auto}.brand span{font-size:14px}
+ .nav-actions{flex:0 0 auto}
+ .tracking-card{padding:14px}.tracking-fields{grid-template-columns:1fr}
+ .tracking-fields .primary{width:100%}
+}
+
+
+/* Final layout fixes: show the three benefit cards on every screen and keep order tracking compact. */
+.benefits{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 auto 34px}
+.tracking-section{max-width:760px;padding:0 16px;margin:16px auto 30px}
+.tracking-section .section-head{margin-bottom:9px}
+.tracking-section .section-head h2{font-size:18px;margin:2px 0}
+.tracking-section .section-head p{font-size:10px}
+.tracking-card{max-width:560px;padding:11px;border-radius:13px}
+.tracking-fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:7px}
+.tracking-fields input{min-width:0;padding:9px 10px;font-size:11px}
+.tracking-fields .primary{padding:9px 12px;font-size:10px;letter-spacing:.3px}
+.price{display:inline-flex;align-items:center;gap:4px;padding:7px 12px;border-radius:12px;background:linear-gradient(135deg,#fffaf2,#f0e2cf);border:1px solid #e8d4b8;color:#5d4024;box-shadow:0 3px 9px #6b492012;font-weight:800}
+@media(max-width:850px){.benefits{grid-template-columns:repeat(3,minmax(0,1fr))}.benefit{padding:11px 10px;gap:8px}.benefit b{font-size:10px}.benefit span{font-size:9px}}
+@media(max-width:560px){
+ .benefits{display:grid!important;grid-template-columns:1fr;gap:7px;margin:0 12px 25px;padding:0}
+ .benefit{padding:10px 12px;min-height:56px;gap:10px}
+ .benefit i{width:32px;height:32px;flex:0 0 32px;font-size:14px}
+ .benefit b{font-size:11px}.benefit span{font-size:9px}
+ .tracking-section{padding:0 12px;margin:12px auto 23px}
+ .tracking-card{padding:10px}
+ .tracking-fields{grid-template-columns:1fr 1fr;gap:7px}
+ .tracking-fields .primary{grid-column:1/-1;width:100%}
+ .top-search{flex:1;min-width:0;max-width:none;height:34px;padding:0 8px;gap:6px}
+ .top-search input{font-size:10px;min-width:0}
+ .nav{gap:6px}
+ .brand{gap:5px;letter-spacing:0}.brand span{font-size:13px}
+ .nav-actions{gap:6px}
+ .loading-skeleton{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+}
+
+/* Requested-only update: service cards in one horizontal slider; keep hero copy + image together */
+.benefits-slider{
+  max-width:1240px;
+  margin:0 auto 36px;
+  padding:0 22px;
+  position:relative;
+}
+.benefits-slider .benefits{
+  display:flex!important;
+  gap:12px;
+  max-width:none;
+  width:100%;
+  margin:0;
+  padding:0 2px 8px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+}
+.benefits-slider .benefits::-webkit-scrollbar{display:none}
+.benefits-slider .benefit{
+  flex:0 0 calc((100% - 24px)/3);
+  min-width:0;
+  scroll-snap-align:start;
+}
+.benefit-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-60%);
+  z-index:2;
+  width:30px;
+  height:30px;
+  border:1px solid #e8e2da;
+  border-radius:50%;
+  background:#fff;
+  color:#3c332a;
+  box-shadow:0 3px 12px #00000012;
+  display:grid;
+  place-items:center;
+}
+.benefit-arrow.prev{left:8px}
+.benefit-arrow.next{right:8px}
+@media(max-width:850px){
+  .benefits-slider{padding:0 22px}
+  .benefits-slider .benefit{flex-basis:calc((100% - 24px)/3)}
+}
+@media(max-width:560px){
+  .hero-inner{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important}
+  .hero-copy{min-width:0;padding:15px 12px!important}
+  .hero-art{min-width:0;min-height:170px!important}
+  .benefits-slider{padding:0 18px;margin-bottom:25px}
+  .benefits-slider .benefits{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    gap:9px;
+    padding:0 1px 7px;
+  }
+  .benefits-slider .benefit{
+    flex:0 0 84%;
+    min-height:64px;
+    padding:12px 13px;
+  }
+  .benefits-slider .benefit b{font-size:11px}
+  .benefits-slider .benefit span{font-size:9px}
+  .benefit-arrow{width:25px;height:25px;font-size:10px}
+  .benefit-arrow.prev{left:3px}
+  .benefit-arrow.next{right:3px}
+}
+
+
+/* Order ID copy + confirmation UI */
+.order-id-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:8px 0}
+.copy-order-btn{border:1px solid #dfd2c1;background:#fff8ef;color:#725437;border-radius:9px;padding:8px 11px;font-size:11px;font-weight:700;cursor:pointer}
+.order-success-title{display:flex;align-items:center;gap:8px;color:#28734b;font-weight:800;margin-bottom:8px}
+.order-success-title i{font-size:18px}
+.order-help{font-size:11px;line-height:1.6;color:#71675e;margin:8px 0 0}
+.tracking-result{line-height:1.8}
+
+
+/* Style Zone Bd compact hero, cards and image zoom */
+.hero{margin:12px auto 26px}.hero-inner{min-height:260px}.hero-copy{padding:34px 6%}
+.hero h1{font-size:clamp(29px,4vw,48px);margin:11px 0 8px}
+.hero p{font-size:12px;line-height:1.55;margin:0 0 12px}.hero-art{min-height:240px}
+.product-photo{aspect-ratio:.88}.product-info{padding:8px 2px}
+.product-info h3{font-size:12px;margin-bottom:4px}.product-info .price{font-size:12px}
+.product-info .desc{font-size:10px;margin-top:3px}
+.stock-chip{position:absolute;right:8px;top:8px;background:#fff;color:#176b42;border-radius:20px;padding:4px 7px;font-size:9px;font-weight:700;box-shadow:0 2px 8px #0001}
+.detail-img img{cursor:zoom-in}
+.image-zoom{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}
+.image-zoom.show{display:flex}.image-zoom img{max-width:100%;max-height:92vh;object-fit:contain}
+.image-zoom button{position:absolute;right:18px;top:15px;background:#fff;border:0;border-radius:50%;width:40px;height:40px;font-size:24px}
+@media(max-width:560px){
+ .hero{margin:9px auto 18px}.hero-inner{min-height:150px;max-height:175px;grid-template-columns:1fr .78fr}
+ .hero-copy{padding:12px 10px}.hero .eyebrow{font-size:7px;letter-spacing:.7px}
+ .hero h1{font-size:clamp(19px,5.8vw,27px);margin:6px 0 4px}
+ .hero p{font-size:8px;line-height:1.3;margin-bottom:6px}
+ .hero .primary{font-size:7px;padding:7px 8px}.hero-art{min-height:150px}
+ .products{gap:13px 8px}.product-photo{aspect-ratio:.82}
+ .product-info h3{font-size:11px}.product-info .price{font-size:11px}
+}
+
+/* Refined compact brand footer, hero, product detail and payment number panel */
+.hero{margin:8px auto 20px}.hero-inner{min-height:220px;max-height:270px}.hero-copy{padding:25px 5%}.hero h1{font-size:clamp(27px,3.6vw,42px);margin:8px 0 6px}.hero p{font-size:11px;line-height:1.45;margin:0 0 9px}.hero-art{min-height:210px}
+.compact-footer{padding:25px 20px 14px}.compact-footer .footer-inner{gap:20px}.compact-footer h3{font-size:15px;margin:0 0 6px;letter-spacing:1.5px}.compact-footer p,.compact-footer a{font-size:11px;line-height:1.65}.compact-footer .footer-inner>div>b{font-size:10px;letter-spacing:1px}.compact-footer .footer-bottom{margin-top:16px;padding-top:10px;font-size:9px}
+.detail-copy{padding:24px 22px;min-width:0}.detail-copy .wide{position:sticky;bottom:0;z-index:3;margin-top:16px;box-shadow:0 -5px 18px #fff,0 6px 18px #0002}.detail-stock{display:inline-flex;align-items:center;margin:3px 0 10px;padding:7px 11px;border-radius:20px;background:#eaf6ee;color:#176b42;font-size:12px;font-weight:700}.detail-stock.out{background:#fff0f0;color:#b42318}
+.pay-note{border:1px solid #eadfd2;border-radius:13px;background:linear-gradient(145deg,#fffaf4,#f7f1e9);padding:15px;font-size:12px;line-height:1.7;color:#3d332b}.pay-note>b{display:block;font-size:14px;margin-bottom:4px}.pay-number-list{display:grid;gap:9px;margin:12px 0}.pay-number-card{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 13px;border:1px solid #e7d7c5;border-radius:11px;background:#fff;box-shadow:0 3px 12px #5d3a1710}.pay-number-card small{display:block;font-size:10px;color:#8b735c;font-weight:700;margin-bottom:3px}.pay-number-card strong{display:block;font-size:19px;letter-spacing:.7px;color:#17120e;overflow-wrap:anywhere}.pay-number-card button{flex-shrink:0;border:0;border-radius:8px;background:#17120e;color:#fff;padding:9px 12px;font-size:11px;font-weight:700}
+@media(max-width:560px){.hero{margin:7px auto 14px}.hero-inner{min-height:132px;max-height:148px;grid-template-columns:1fr .66fr}.hero-copy{padding:10px 9px}.hero .eyebrow{font-size:6px;letter-spacing:.45px}.hero h1{font-size:clamp(18px,5.2vw,23px);line-height:1.02;margin:5px 0 3px}.hero p{font-size:7px;line-height:1.22;margin:0 0 5px}.hero .primary{font-size:6px;padding:6px 7px;letter-spacing:.5px}.hero-art{min-height:132px}.compact-footer{padding:22px 16px 12px}.compact-footer .footer-inner{grid-template-columns:1.25fr 1fr;gap:13px 18px}.compact-footer .footer-inner>div:first-child{grid-column:1/-1}.compact-footer p,.compact-footer a{font-size:10px;line-height:1.55}.compact-footer .footer-bottom{margin-top:13px}.product-detail{grid-template-columns:1fr}.detail-img,.detail-img img{min-height:260px;max-height:360px}.detail-copy{padding:17px 16px 20px}.detail-copy h2{font-size:20px;margin:4px 0 7px}.detail-copy .wide{position:sticky;bottom:0}.pay-number-card{padding:11px}.pay-number-card strong{font-size:18px}.pay-number-card button{padding:9px 10px}}
+
+
+/* Delivery card opens a private, phone-verified order summary. */
+.benefit-clickable{cursor:pointer;position:relative;outline:none}
+.benefit-clickable:focus-visible{outline:2px solid #9b744f;outline-offset:3px}
+.benefit-clickable small{display:block;margin-top:5px;color:#8b6848;font-size:9px;font-weight:700}
+.benefit-clickable small i{margin-left:3px}
+.my-orders-section{max-width:760px;margin:16px auto 30px;padding:0 16px;scroll-margin-top:90px}
+.my-orders-section[hidden]{display:none!important}
+.my-orders-section .section-head{margin-bottom:10px}
+.my-orders-section .section-head h2{font-size:20px;margin:3px 0}
+.my-orders-section .section-head p{font-size:11px}
+.my-orders-card{max-width:680px;padding:16px}
+.my-orders-fields{grid-template-columns:minmax(0,1fr) auto}
+.my-orders-fields .primary{border-radius:9px;padding:12px 18px}
+.my-orders-result{margin-top:14px;color:#554b40;font-size:12px;line-height:1.8}
+.order-stats-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0}
+.order-stat{padding:13px 10px;border:1px solid #eee3d6;border-radius:12px;background:linear-gradient(145deg,#fff,#faf6f0);text-align:center}
+.order-stat strong{display:block;font-size:24px;line-height:1.2;color:#33271d}
+.order-stat span{font-size:10px;color:#796b5d;font-weight:700}
+.my-order-row{padding:11px 0;border-top:1px solid #eee8e0;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.my-order-row b{display:block;font-size:11px;color:#29231d}
+.my-order-row small{font-size:10px;color:#887d71}
+.my-order-row .status-pill{white-space:nowrap}
+.hero{margin:18px auto 30px}
+.hero-inner{min-height:280px;border-radius:24px}
+.hero-copy{padding:38px 7%}
+.hero h1{font-size:clamp(34px,4.5vw,54px);margin:12px 0 10px}
+.hero p{margin:0;max-width:370px;font-size:13px}
+.hero-art{min-height:250px}
+#heroButton{display:none!important}
+@media(max-width:560px){
+ .hero{margin:12px auto 22px;padding:0 12px}
+ .hero-inner{min-height:0;grid-template-columns:1fr;grid-template-rows:auto 170px;border-radius:18px}
+ .hero-copy{padding:24px 22px 20px}
+ .hero h1{font-size:36px;line-height:1.04;margin:9px 0 8px}
+ .hero p{font-size:11px;line-height:1.65;max-width:310px}
+ .hero-art{min-height:170px;height:170px}
+ .my-orders-section{padding:0 12px;margin:12px auto 24px}
+ .my-orders-card{padding:12px}
+ .my-orders-fields{grid-template-columns:1fr}
+ .my-orders-fields .primary{width:100%}
+ .order-stats-grid{gap:6px}
+ .order-stat{padding:11px 5px}
+ .order-stat strong{font-size:21px}
+ .order-stat span{font-size:9px}
+}
+
+/* Final mobile polish: keep service-card typography full-size and make categories swipeable. */
+.benefits-slider .benefit{min-height:88px;padding:16px 18px;gap:13px;}
+.benefits-slider .benefit>i{font-size:22px;flex:0 0 auto;}
+.benefits-slider .benefit b{font-size:12px;line-height:1.35;}
+.benefits-slider .benefit span{display:block;font-size:10px;line-height:1.45;margin-top:3px;}
+.benefits-slider .benefit small{display:block;font-size:10px;line-height:1.45;margin-top:5px;}
+#filters{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto;overflow-y:hidden;white-space:nowrap;gap:9px;padding:3px 2px 12px;margin:0 0 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;}
+#filters::-webkit-scrollbar{display:none}
+#filters .filter{flex:0 0 auto;white-space:nowrap;scroll-snap-align:start;padding:10px 17px;font-size:12px;}
+@media(max-width:560px){
+ .benefits-slider .benefit{flex-basis:100%;min-height:88px;padding:16px 17px;}
+ .benefits-slider .benefit b{font-size:12px!important;}
+ .benefits-slider .benefit span{font-size:10px!important;}
+ .benefits-slider .benefit small{font-size:10px!important;}
+ .benefit-arrow{width:29px;height:29px;font-size:11px;}
+ #filters{margin-left:0;margin-right:0;}
+}
+
+
+/* Compact delivery highlight, matching the earlier small card size */
+.benefits-slider .benefit-clickable{min-height:62px;padding:10px 12px;gap:9px;border-radius:11px}
+.benefits-slider .benefit-clickable>i{font-size:17px;flex:0 0 auto}
+.benefits-slider .benefit-clickable b{font-size:11px;line-height:1.25}
+.benefits-slider .benefit-clickable span{font-size:9px;line-height:1.25;display:block}
+.benefits-slider .benefit-clickable small{font-size:9px;line-height:1.25;margin-top:3px}
+.my-account-section{max-width:760px;margin:16px auto 30px;padding:0 16px;scroll-margin-top:90px}
+.my-account-section[hidden]{display:none!important}
+.my-account-card{padding:16px}
+.account-id-line{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border:1px solid #eadfce;border-radius:11px;background:#faf6f0}
+.account-id-line span{font-size:11px;color:#75634e;font-weight:600}.account-id-line strong{font-size:15px;letter-spacing:1px;color:#33271d}
+.account-note{font-size:10px;color:#81776d;line-height:1.6;margin:9px 2px}
+@media(max-width:560px){.benefits-slider .benefit-clickable{min-height:60px;padding:9px 11px}.benefits-slider .benefit-clickable b{font-size:10px}.benefits-slider .benefit-clickable span,.benefits-slider .benefit-clickable small{font-size:8px}.account-id-line strong{font-size:12px}}
+
+
+/* Compact service cards and horizontally scrollable compact category chips */
+.benefits-slider .benefits{gap:8px;padding-bottom:5px}
+.benefits-slider .benefit{min-height:62px;padding:9px 11px;gap:8px;border-radius:11px}
+.benefits-slider .benefit>i{width:29px;height:29px;flex:0 0 29px;font-size:13px;border-radius:9px}
+.benefits-slider .benefit b{font-size:10px;line-height:1.25}
+.benefits-slider .benefit span{font-size:8.5px;line-height:1.25;margin-top:2px}
+.benefits-slider .benefit small{font-size:8px;line-height:1.25;margin-top:3px}
+.filters{display:flex!important;flex-wrap:nowrap!important;gap:6px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:1px 1px 7px;margin-bottom:18px}
+.filters::-webkit-scrollbar{display:none}
+.filter{flex:0 0 auto;padding:6px 11px;font-size:10px;line-height:1.2;border-radius:22px;white-space:nowrap}
+@media(max-width:560px){
+ .benefits-slider{padding:0 14px;margin-bottom:20px}
+ .benefits-slider .benefits{gap:7px}
+ .benefits-slider .benefit{flex:0 0 47%;min-height:57px;padding:8px 9px;gap:7px}
+ .benefits-slider .benefit>i{width:26px;height:26px;flex-basis:26px;font-size:12px}
+ .benefits-slider .benefit b{font-size:9px}
+ .benefits-slider .benefit span{font-size:8px}
+ .benefits-slider .benefit small{font-size:7.5px}
+ .benefit-arrow{width:23px;height:23px;font-size:9px}
+ .section-head{margin-bottom:14px}
+ .filters{gap:5px;margin-bottom:14px}
+ .filter{padding:5px 9px;font-size:9px}
+}
+
+
+/* Exact compact horizontal service-card sizing from the supplied reference */
+@media(max-width:560px){
+  .benefits-slider{padding:0 18px;margin-bottom:25px}
+  .benefits-slider .benefits{display:flex!important;flex-wrap:nowrap!important;gap:9px;padding:0 1px 7px}
+  .benefits-slider .benefit{
+    flex:0 0 80%!important;
+    min-height:64px!important;
+    padding:12px 13px!important;
+    gap:10px!important;
+    border-radius:16px!important;
+  }
+  .benefits-slider .benefit>i{
+    width:32px!important;height:32px!important;flex:0 0 32px!important;
+    display:grid;place-items:center;font-size:17px!important;border-radius:12px!important;
+  }
+  .benefits-slider .benefit b{font-size:11px!important;line-height:1.3!important}
+  .benefits-slider .benefit span{font-size:9px!important;line-height:1.35!important;margin-top:3px!important}
+  .benefits-slider .benefit small{display:none!important}
+  .benefit-arrow{width:25px!important;height:25px!important;font-size:10px!important}
+}
+
+</style>
+</head>
+<body>
+<header class="top"><nav class="nav">
+<button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="মেনু"><i class="fa-solid fa-bars"></i></button>
+<a class="brand" href="#home"><img id="brandLogo" alt="Style Zone Bd" style="display:none"><span id="brandName">STYLE ZONE BD</span></a>
+<div class="top-search"><i class="fa-solid fa-magnifying-glass"></i><input id="topSearchInput" type="search" placeholder="প্রোডাক্ট খুঁজুন..." oninput="syncTopSearch(this.value)"></div>
+<div class="navlinks" id="mainMenu"><a id="navHome" href="#home" onclick="closeMenu()">HOME</a><a id="navShop" href="#shop" onclick="closeMenu()">SHOP</a><a id="navCollection" href="#shop" onclick="closeMenu()">COLLECTION</a><a id="navContact" href="#footer" onclick="closeMenu()">CONTACT</a><a id="navTrackOrder" href="#orderTracking" onclick="showOrderTracking()">অর্ডার স্ট্যাটাস</a><a id="navMyAccount" href="#myAccountSection" onclick="showMyAccount()">আমার একাউন্ট</a><a id="facebookMenuLink" href="#" target="_blank" rel="noopener" style="display:none" onclick="closeMenu()">FACEBOOK</a></div>
+<div class="nav-actions"><button class="icon-btn" onclick="openCart()" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="count" id="cartCount">0</span></button></div>
+</nav></header>
+
+<main id="home">
+<section class="hero"><div class="hero-inner"><div class="hero-copy"><span class="eyebrow" id="heroEyebrow">NEW COLLECTION · STYLE ZONE SAYEM BHAI</span><h1 id="heroTitle">Wear Your Own Story..!</h1><p id="heroDescription">নিত্য প্রয়োজনীয় জিনিস, নিরবধি শৈলী। এমন টুকরোগুলি আবিষ্কার করুন যা প্রতিদিন আপনাকে একটু বেশি অনুভব করে....!  Stly Zone Bangladesh (-S Z B-)</p></div><div class="hero-art" id="heroArt"><div class="placeholder"><i class="fa-solid fa-shirt"></i></div></div></div></section>
+<section class="benefits-slider" aria-label="Style Zone Bd service highlights">
+  <button class="benefit-arrow prev" type="button" aria-label="আগের সুবিধা" onclick="slideBenefits(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+  <div class="benefits" id="benefitsTrack">
+    <div class="benefit benefit-clickable" role="button" tabindex="0" aria-label="আপনার অর্ডারের হিসাব দেখুন" onclick="showMyOrders()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showMyOrders()}"><i class="fa-solid fa-truck-fast"></i><div><b>Delivery Across Bangladesh</b><span>আপনি কতটা প্রডাক্ট কিনেছেন তা দেখেন</span><small>আপনার অর্ডারের হিসাব দেখতে ট্যাপ করুন <i class="fa-solid fa-arrow-right"></i></small></div></div>
+    <div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><b>Easy Order Process</b><span>সহজ ও নিরাপদ অর্ডার</span></div></div>
+    <div class="benefit"><i class="fa-regular fa-heart"></i><div><b>Made for Your Style</b><span>পছন্দের পোশাক, নিজের স্টাইল</span></div></div>
+  </div>
+  <button class="benefit-arrow next" type="button" aria-label="পরের সুবিধা" onclick="slideBenefits(1)"><i class="fa-solid fa-chevron-right"></i></button>
+</section>
+<section class="section" id="shop"><div class="filters" id="filters"><button class="filter active" data-cat="all" onclick="setCategory('all',this)">ALL</button></div><div class="products" id="products"><div class="loading"><span class="loading-spinner"></span><span>Style Zone Bd Collection লোড হচ্ছে...</span></div></div></section>
+</main>
+
+<section class="section tracking-section" id="orderTracking" hidden>
+  <div class="section-head"><div><span class="eyebrow" id="trackingEyebrow">ORDER UPDATE</span><h2 id="trackingTitle">আপনার অর্ডারের অবস্থা দেখুন</h2><p id="trackingDescription">Order ID ও অর্ডারের মোবাইল নম্বর দিয়ে স্ট্যাটাস যাচাই করুন</p></div></div>
+  <div class="tracking-card">
+    <div class="tracking-fields">
+      <input id="trackOrderId" type="text" placeholder="Order ID (যেমন RA123456789)">
+      <input id="trackPhone" type="tel" placeholder="অর্ডারের মোবাইল নম্বর">
+      <button class="primary" id="trackOrderBtn" onclick="trackOrder()">স্ট্যাটাস দেখুন</button>
+    </div>
+    <div id="trackingResult" class="tracking-result" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="section my-account-section" id="myAccountSection" hidden>
+  <div class="section-head"><div><span class="eyebrow">MY STYLE ZONE</span><h2>আমার একাউন্ট</h2><p>আপনার মোবাইলে স্বয়ংক্রিয়ভাবে তৈরি হওয়া একাউন্ট</p></div></div>
+  <div class="tracking-card my-account-card"><div class="account-id-line"><span>আপনার Customer ID</span><strong id="myCustomerId">লোড হচ্ছে...</strong></div><p class="account-note">এই ID আপনার মোবাইলের সঙ্গে যুক্ত। একই মোবাইল/ব্রাউজার ব্যবহার করলে একাউন্টটি আবার পাওয়া যাবে।</p><div id="accountOrdersResult" class="my-orders-result" aria-live="polite">আপনার অর্ডার লোড হচ্ছে...</div></div>
+</section>
+
+<section class="section my-orders-section" id="myOrdersSection" hidden>
+  <div class="section-head"><div><span class="eyebrow">MY STYLE ZONE</span><h2>আমার অর্ডারের হিসাব</h2><p>অর্ডারের সময় দেওয়া মোবাইল নম্বর দিয়ে আপনার ALL অর্ডার দেখুন</p></div></div>
+  <div class="tracking-card my-orders-card">
+    <div class="tracking-fields my-orders-fields"><input id="myOrdersPhone" type="tel" inputmode="tel" placeholder="অর্ডারের মোবাইল নম্বর (01XXXXXXXXX)"><button class="primary" id="myOrdersBtn" type="button" onclick="loadMyOrders()">হিসাব দেখুন</button></div>
+    <div id="myOrdersResult" class="my-orders-result" aria-live="polite"></div>
+  </div>
+</section>
+
+<footer class="footer compact-footer" id="footer"><div class="footer-inner"><div><h3 id="footerName">STYLE ZONE BD</h3><p id="footerDescription">Everyday essentials, timeless style.<br>Find your fit. Wear your story.</p></div><div><b>QUICK LINKS</b><p><a href="#home">Home</a><br><a href="#shop">Shop Collection</a><br><a href="#shop">New Arrivals</a></p></div><div><b>GET IN TOUCH</b><p id="contactInfo">For orders and enquiries: 01349237301</p><a id="whatsappLink" href="https://wa.me/8801349237301" target="_blank" rel="noopener">WHATSAPP US →</a><br><a id="facebookFooterLink" href="#" target="_blank" rel="noopener" style="display:none">FACEBOOK PAGE →</a><br><a id="telegramChannelLink" href="#" target="_blank" rel="noopener" style="display:none">TELEGRAM CHANNEL →</a></div></div><div class="footer-bottom">© <span id="year"></span> STYLE ZONE</div></footer>
+<div class="overlay" id="overlay" onclick="closeCart()"></div><aside class="drawer" id="cartDrawer"><div class="drawer-head"><h3>YOUR BAG (<span id="drawerCount">0</span>)</h3><button class="close" onclick="closeCart()">×</button></div><div class="drawer-body" id="cartItems"></div><div class="drawer-foot"><div class="total-line"><span>Subtotal</span><b id="cartSubtotal">৳0</b></div><button class="primary wide" onclick="startCheckout()">PROCEED TO CHECKOUT</button></div></aside>
+<div class="modal" id="productModal" onclick="if(event.target===this)closeProduct()"><div class="modal-box"><button class="modal-close" onclick="closeProduct()">×</button><div id="productModalContent"></div></div></div>
+<div class="modal" id="checkoutModal" onclick="if(event.target===this)closeCheckout()"><div class="modal-box"><button class="modal-close" onclick="closeCheckout()">×</button><form class="form" id="checkoutForm"><h2>Checkout</h2><p class="sub">আপনার ডেলিভারি তথ্য দিন</p><div class="field"><label>আপনার নাম *</label><input id="cName" required placeholder="পূর্ণ নাম"></div><div class="two"><div class="field"><label>মোবাইল নম্বর *</label><input id="cPhone" required type="tel" placeholder="01XXXXXXXXX"></div><div class="field"><label>বিভাগ *</label><select id="cDivision" required><option value="">বিভাগ নির্বাচন</option><option>Dhaka</option><option>Chattogram</option><option>Sylhet</option><option>Rajshahi</option><option>Khulna</option><option>Barishal</option><option>Rangpur</option><option>Mymensingh</option></select></div></div><div class="two"><div class="field"><label>জেলা *</label><input id="cDistrict" required placeholder="জেলার নাম"></div><div class="field"><label>উপজেলা / থানা *</label><input id="cThana" required placeholder="উপজেলা / থানা"></div></div><div class="field"><label>সম্পূর্ণ ঠিকানা *</label><textarea id="cAddress" rows="2" required placeholder="বাড়ি, রোড, এলাকা"></textarea></div><div class="field"><label>ডেলিভারি এলাকা *</label><select id="cDelivery" required><option value="">নির্বাচন করুন</option><option value="inside">ঢাকার ভিতরে</option><option value="outside">ঢাকার বাইরে</option></select></div><div class="field"><label>পেমেন্ট পদ্ধতি *</label><select id="cPayment" required><option value="COD">Cash on Delivery</option><option value="bKash">বিকাশ (অগ্রিম)</option><option value="Nagad">নগদ (অগ্রিম)</option></select></div><div class="field" id="txnField" style="display:none"><label>Transaction ID</label><input id="cTxn" placeholder="পেমেন্টের Transaction ID"></div><div class="pay-note" id="paymentNote">Cash on Delivery — পণ্য হাতে পেয়ে মূল্য পরিশোধ করুন।</div><div class="total-line"><span>পণ্যের মূল্য</span><b id="checkoutSubtotal">৳0</b></div><div class="total-line"><span>ডেলিভারি চার্জ</span><b id="checkoutDelivery">৳0</b></div><div class="total-line" style="font-size:16px"><b>সর্বমোট</b><b id="checkoutTotal">৳0</b></div><button class="primary wide" id="placeOrderBtn" type="submit">PLACE ORDER</button></form></div></div>
+<div class="image-zoom" id="imageZoom" onclick="if(event.target===this)closeImageZoom()"><button type="button" onclick="closeImageZoom()">×</button><img id="zoomedImage" alt="Zoomed product image"></div><div class="toast" id="toast"></div>
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js';
+import { getDatabase, ref, onValue, push, set, get, query, orderByChild, equalTo } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js';
+const firebaseConfig={apiKey:'AIzaSyBvW2LYJnuEZcWXmZKZxxB2PxjN8Fnitb0',authDomain:'stylezone-c4b67.firebaseapp.com',databaseURL:'https://stylezone-c4b67-default-rtdb.firebaseio.com',projectId:'stylezone-c4b67',storageBucket:'stylezone-c4b67.firebasestorage.app',messagingSenderId:'144328144489'};
+const app=initializeApp(firebaseConfig);const db=getDatabase(app);
+// A quiet, device-local customer ID: generated automatically and never shown in the storefront.
+function makeCustomerId(){
+  const bytes=new Uint8Array(6);
+  if(globalThis.crypto?.getRandomValues) crypto.getRandomValues(bytes);
+  else for(let i=0;i<bytes.length;i++) bytes[i]=Math.floor(Math.random()*256);
+  return 'SZB'+Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();
+}
+let customerId=localStorage.getItem('stylezonebd_customer_id');
+if(!customerId){customerId=makeCustomerId();localStorage.setItem('stylezonebd_customer_id',customerId);}
+get(ref(db,'customerIds/'+customerId)).then(snap=>{
+  if(!snap.exists()) return set(ref(db,'customerIds/'+customerId),{customerId,createdAt:new Date().toISOString(),device:'web'});
+}).catch(err=>console.warn('[Style Zone Bd] Customer ID registration failed:',err));
+const normalizePhone=value=>{let n=String(value||'').replace(/[০-৯]/g,d=>String('০১২৩৪৫৬৭৮৯'.indexOf(d))).replace(/[٠-٩]/g,d=>String('٠١٢٣٤٥٦٧٨٩'.indexOf(d))).replace(/\D/g,'');if(n.startsWith('00880'))n='0'+n.slice(5);else if(n.startsWith('880'))n='0'+n.slice(3);if(n.length===10&&n.startsWith('1'))n='0'+n;return n;};
+let allProducts=[],settings={},cart=JSON.parse(localStorage.getItem('stylezonebd_cart')||'[]'),activeCategory='all',selectedProduct=null,selectedSize='',selectedImageIndex=0;
+const money=n=>'৳'+Number(n||0).toLocaleString('en-BD');const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2600)}
+
+// Live site configuration: copy, logo, hero artwork, theme, offer strip and social links.
+function applySiteSettings(s){
+  settings=s||{};
+  const name='Style Zone Bd';
+  document.getElementById('brandName').textContent=name.toUpperCase();
+  document.getElementById('footerName').textContent=name.toUpperCase();
+  document.title=name+' — Wear Your Style';
+  const logo=document.getElementById('brandLogo');
+  if(settings.logoUrl){logo.src=settings.logoUrl;logo.style.display='block';logo.onerror=()=>{logo.style.display='none'};}else{logo.removeAttribute('src');logo.style.display='none';}
+  const heroEyebrow=document.getElementById('heroEyebrow'); if(heroEyebrow)heroEyebrow.textContent=String(settings.heroEyebrow||'NEW COLLECTION · STYLE ZONE SAYEM BHAI').replace(/RONGAURA/gi,'STYLE ZONE BD');
+  const heroTitle=document.getElementById('heroTitle'); if(heroTitle)heroTitle.innerHTML=safe(settings.heroTitle||'Wear Your Own Story..!').replace(/\n/g,'<br>');
+  const heroDesc=document.getElementById('heroDescription');if(heroDesc)heroDesc.textContent=settings.heroDescription||'নিত্য প্রয়োজনীয় জিনিস, নিরবধি শৈলী। এমন টুকরোগুলি আবিষ্কার করুন যা প্রতিদিন আপনাকে একটু বেশি অনুভব করে....!  Stly Zone Bangladesh (-S Z B-)';
+  const heroBtn=document.getElementById('heroButton');if(heroBtn)heroBtn.textContent=settings.heroButtonText||'SHOP COLLECTION →';
+  const setText=(id,value,fallback)=>{const el=document.getElementById(id);if(el)el.textContent=value||fallback;};
+  setText('navHome',settings.navHome,'HOME');setText('navShop',settings.navShop,'SHOP');setText('navContact',settings.navContact,'CONTACT');
+
+  const footDesc=document.getElementById('footerDescription');if(footDesc)footDesc.innerHTML=safe(settings.footerDescription||'Everyday essentials, timeless style.\nFind your fit. Wear your story.').replace(/\n/g,'<br>');
+  const art=document.getElementById('heroArt');if(art){if(settings.heroImageUrl){art.innerHTML=`<img src="${safe(settings.heroImageUrl)}" alt="${safe(name)} collection" fetchpriority="high">`;}else{art.innerHTML='<div class="placeholder"><i class="fa-solid fa-shirt"></i></div>';}}
+  const offer=document.getElementById('offerBar');const offerText=document.getElementById('offerText');const offerBtn=document.getElementById('offerButton');
+  if(offer){offer.style.display=settings.offerEnabled===false?'none':'flex';if(offerText)offerText.textContent=settings.offerText||'FREE DELIVERY OFFERS  •  EVERYDAY STYLE, MADE SIMPLE';if(offerBtn)offerBtn.textContent=settings.offerButtonText||'SHOP NOW';}
+  const root=document.documentElement;root.style.setProperty('--site-bg',settings.siteBgColor||'#ffffff');root.style.setProperty('--hero-bg',settings.heroBgColor||'#ffffff');root.style.setProperty('--brand-accent',settings.accentColor||'#b98b5b');
+  const wa=settings.whatsappRaw||settings.whatsappNumber||'';const digits=String(wa).replace(/\D/g,'');const waLink=document.getElementById('whatsappLink');if(waLink&&digits)waLink.href='https://wa.me/'+digits;
+  document.getElementById('contactInfo').textContent='For orders and enquiries: '+(settings.whatsappNumber||'01349237301');
+  document.getElementById('whatsappLink').href='https://wa.me/'+String(settings.whatsappNumber||'8801349237301').replace(/\D/g,'').replace(/^0/,'880');
+  const fb=settings.facebookPageUrl||'';['facebookMenuLink','facebookFooterLink'].forEach(id=>{const el=document.getElementById(id);if(el){el.href=fb||'#';el.style.display=fb?'inline-block':'none';}});
+  const tg=settings.telegramChannelLink||settings.telegramLink||'';
+  const tgEl=document.getElementById('telegramChannelLink');if(tgEl){tgEl.href=tg||'#';tgEl.style.display=tg?'inline-block':'none';}
+  applyLanguage(settings.language||settings.userLanguage||'bn');
+  applyButtonLabels(settings.buttonLabels||{});
+
+}
+function applyButtonLabels(labels){
+  const map={
+    addToBag:['ADD TO BAG','addToBag'],
+    viewProduct:['VIEW PRODUCT','viewProduct'],
+    checkout:['PROCEED TO CHECKOUT','checkout'],
+    placeOrder:['PLACE ORDER','placeOrder'],
+    trackOrder:['স্ট্যাটাস দেখুন','trackOrder']
+  };
+  Object.entries(map).forEach(([key,[fallback,id]])=>{
+    const value=labels[key]||settings[key+'Text']||fallback;
+    if(key==='addToBag'){
+      document.querySelectorAll('.detail-copy .primary').forEach(el=>el.textContent=value);
+    }else if(key==='viewProduct'){
+      document.querySelectorAll('.quick').forEach(el=>el.textContent=value);
+    }else if(key==='checkout'){
+      const el=document.querySelector('.drawer-foot .primary');if(el)el.textContent=value;
+    }else if(key==='placeOrder'){
+      const el=document.getElementById('placeOrderBtn');if(el)el.textContent=value;
+    }else{
+      const el=document.getElementById('trackOrderBtn');if(el)el.textContent=value;
+    }
+  });
+}
+function applyLanguage(lang){
+  const en=String(lang).toLowerCase().startsWith('en');
+  document.documentElement.lang=en?'en':'bn';
+  const text={
+    search:en?'Search products...':'প্রোডাক্ট খুঁজুন...',
+    trackingTitle:en?'Check your order status':'আপনার অর্ডারের অবস্থা দেখুন',
+    trackingDescription:en?'Enter your Order ID and phone number to check the status':'Order ID ও অর্ডারের মোবাইল নম্বর দিয়ে স্ট্যাটাস যাচাই করুন',
+    trackingEyebrow:en?'ORDER UPDATE':'ORDER UPDATE',
+    trackId:en?'Order ID (e.g. RA123456789)':'Order ID (যেমন RA123456789)',
+    trackPhone:en?'Order phone number':'অর্ডারের মোবাইল নম্বর'
+  };
+  const set=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
+  set('trackingTitle',text.trackingTitle);set('trackingDescription',text.trackingDescription);set('trackingEyebrow',text.trackingEyebrow);
+  const s=document.getElementById('topSearchInput');if(s)s.placeholder=text.search;
+  const tid=document.getElementById('trackOrderId');if(tid)tid.placeholder=text.trackId;
+  const tph=document.getElementById('trackPhone');if(tph)tph.placeholder=text.trackPhone;
+  const tb=document.getElementById('trackOrderBtn');if(tb&&!settings.buttonLabels?.trackOrder)tb.textContent=en?'Check Status':'স্ট্যাটাস দেখুন';
+}
+window.syncTopSearch=value=>{renderProducts();};
+window.copyOrderId=async(id)=>{
+  try{
+    await navigator.clipboard.writeText(id);
+    toast('Order ID কপি হয়েছে');
+  }catch(err){
+    const temp=document.createElement('textarea');temp.value=id;document.body.appendChild(temp);temp.select();
+    try{document.execCommand('copy');toast('Order ID কপি হয়েছে');}catch(e){toast('Order ID: '+id);}
+    temp.remove();
+  }
+};
+window.trackOrder=async()=>{
+  const orderId=document.getElementById('trackOrderId').value.trim();
+  const phone=normalizePhone(document.getElementById('trackPhone').value);
+  const result=document.getElementById('trackingResult');
+  const en=String(settings.language||settings.userLanguage||'bn').toLowerCase().startsWith('en');
+  if(!orderId||!phone){result.textContent=en?'Please enter both Order ID and phone number.':'Order ID ও মোবাইল নম্বর—দুটিই লিখুন।';return;}
+  const btn=document.getElementById('trackOrderBtn');btn.disabled=true;
+  result.textContent=en?'Checking order...':'অর্ডার খোঁজা হচ্ছে...';
+  try{
+    const q=query(ref(db,'orders'),orderByChild('orderId'),equalTo(orderId));
+    const snap=await get(q);let found=null;
+    if(snap.exists())snap.forEach(child=>{const item=child.val()||{};const saved=normalizePhone(item.phone);if(saved===phone)found=item;});
+    if(!found){result.textContent=en?'No matching order was found. Check your Order ID and phone number.':'মিল পাওয়া যায়নি। Order ID ও মোবাইল নম্বর যাচাই করুন।';return;}
+    const raw=String(found.status||'pending').toLowerCase();
+    const cancelled=/cancel|বাতিল/.test(raw);
+    const confirmed=/confirm|approved|accepted|processing|shipped|delivered|complete/.test(raw);
+    const label=cancelled?(en?'Cancelled':'বাতিল হয়েছে'):confirmed?(en?'Confirmed':'কনফার্ম হয়েছে'):(en?'Pending':'অপেক্ষমাণ');
+    const cls=cancelled?'status-cancelled':confirmed?'status-confirmed':'status-pending';
+    result.innerHTML=`<div class="order-id-row"><div><b>${en?'Order ID':'অর্ডার আইডি'}:</b> <strong>${safe(found.orderId||orderId)}</strong></div><button type="button" class="copy-order-btn" onclick="copyOrderId('${safe(found.orderId||orderId)}')"><i class="fa-regular fa-copy"></i> ${en?'Copy ID':'আইডি কপি'}</button></div><div><b>${en?'Status':'স্ট্যাটাস'}:</b> <span class="status-pill ${cls}">${label}</span></div><div><b>${en?'Total':'মোট'}:</b> ${money(found.total)}</div>`;
+  }catch(err){
+    console.error('[Style Zone Bd] Order lookup failed:',err);
+    result.textContent=en?'Could not check status. Please try again later.':'স্ট্যাটাস দেখা যাচ্ছে না। কিছুক্ষণ পর আবার চেষ্টা করুন।';
+  }finally{btn.disabled=false;}
+};
+window.showMyAccount=async()=>{
+ const section=document.getElementById('myAccountSection');
+ const idBox=document.getElementById('myCustomerId');
+ const result=document.getElementById('accountOrdersResult');
+ if(idBox)idBox.textContent=customerId;
+ if(section){section.hidden=false;section.scrollIntoView({behavior:'smooth',block:'start'});}
+ window.closeMenu();
+ if(!result)return;
+ result.textContent='আপনার অর্ডার লোড হচ্ছে...';
+ try{
+  const snap=await get(ref(db,'orders'));
+  const mine=[];
+  if(snap.exists())snap.forEach(child=>{const order=child.val()||{};if(String(order.customerId||'')===String(customerId))mine.push(order);});
+  mine.sort((a,b)=>new Date(b.createdAt||0)-new Date(a.createdAt||0));
+  if(!mine.length){result.textContent='এই একাউন্টে এখনো কোনো অর্ডার পাওয়া যায়নি। অর্ডার করার সময় এই ব্রাউজার ব্যবহার করুন।';return;}
+  const statusOf=o=>String(o.status||'pending').toLowerCase();
+  const pending=mine.filter(o=>statusOf(o)==='pending').length;
+  const cancelled=mine.filter(o=>/cancel|বাতিল/.test(statusOf(o))).length;
+  const delivered=mine.filter(o=>/completed|delivered/.test(statusOf(o))).length;
+  const confirmed=mine.filter(o=>/confirm|approved|accepted|processing|shipped|completed|delivered/.test(statusOf(o))).length;
+  result.innerHTML=`<div><b>এই একাউন্টে মোট ${mine.length}টি অর্ডার</b></div><div class="order-stats-grid"><div class="order-stat"><strong>${mine.length}</strong><span>মোট অর্ডার</span></div><div class="order-stat"><strong>${confirmed}</strong><span>কনফার্ম / চলমান</span></div><div class="order-stat"><strong>${pending}</strong><span>পেন্ডিং</span></div></div><div class="order-stats-grid"><div class="order-stat"><strong>${delivered}</strong><span>ডেলিভারি সম্পন্ন</span></div><div class="order-stat"><strong>${cancelled}</strong><span>বাতিল</span></div><div class="order-stat"><strong>${money(mine.reduce((sum,o)=>sum+Number(o.total||0),0))}</strong><span>মোট অর্ডার মূল্য</span></div></div><b>আপনার অর্ডারসমূহ</b>${mine.map(o=>{const st=statusOf(o);const date=o.createdAt?new Date(o.createdAt).toLocaleDateString('bn-BD'):'তারিখ নেই';return `<div class="my-order-row"><div><b>${safe(o.orderId||'অর্ডার')}</b><small>${safe(date)} · ${money(o.total)}</small></div><span class="status-pill ${st==='pending'?'status-pending':/cancel/.test(st)?'status-cancelled':'status-confirmed'}">${safe(st)}</span></div>`;}).join('')}`;
+ }catch(err){console.error('[Style Zone Bd] Account order load failed:',err);result.textContent='একাউন্টের অর্ডার লোড করা যায়নি। পরে আবার চেষ্টা করুন।';}
+};
+window.showMyOrders=()=>{
+ const section=document.getElementById('myOrdersSection');
+ if(section){section.hidden=false;section.scrollIntoView({behavior:'smooth',block:'start'});}
+ window.closeMenu();
+};
+window.loadMyOrders=async()=>{
+ const input=document.getElementById('myOrdersPhone');
+ const result=document.getElementById('myOrdersResult');
+ const btn=document.getElementById('myOrdersBtn');
+ const phone=normalizePhone(input.value);
+ if(phone.length<10){result.textContent='সঠিক মোবাইল নম্বর লিখুন।';return;}
+ btn.disabled=true;result.textContent='আপনার অর্ডার খোঁজা হচ্ছে…';
+ try{
+  const snap=await get(ref(db,'orders'));
+  const mine=[];
+  if(snap.exists())snap.forEach(child=>{const order=child.val()||{};if(normalizePhone(order.phone)===normalizePhone(phone))mine.push(order);});
+  mine.sort((a,b)=>new Date(b.createdAt||0)-new Date(a.createdAt||0));
+  if(!mine.length){result.textContent='এই মোবাইল নম্বরে কোনো অর্ডার পাওয়া যায়নি। অর্ডারের সময় যে নম্বরটি দিয়েছিলেন সেটি লিখুন।';return;}
+  const statusOf=o=>String(o.status||'pending').toLowerCase();
+  const pending=mine.filter(o=>statusOf(o)==='pending').length;
+  const cancelled=mine.filter(o=>/cancel|বাতিল/.test(statusOf(o))).length;
+  const delivered=mine.filter(o=>/completed|delivered/.test(statusOf(o))).length;
+  const confirmed=mine.filter(o=>/confirm|approved|accepted|processing|shipped|completed|delivered/.test(statusOf(o))).length;
+  const label=status=>({pending:'পেন্ডিং',confirmed:'কনফার্ম',processing:'প্রসেসিং',shipped:'শিপড',completed:'ডেলিভারি সম্পন্ন',delivered:'ডেলিভারি সম্পন্ন',cancelled:'বাতিল'})[status]||status;
+  result.innerHTML=`<div><b>${safe(phone)}</b> নম্বরে মোট <b>${mine.length}টি</b> অর্ডার পাওয়া গেছে</div><div class="order-stats-grid"><div class="order-stat"><strong>${mine.length}</strong><span>মোট অর্ডার</span></div><div class="order-stat"><strong>${confirmed}</strong><span>কনফার্ম / চলমান</span></div><div class="order-stat"><strong>${pending}</strong><span>পেন্ডিং</span></div></div><div class="order-stats-grid"><div class="order-stat"><strong>${delivered}</strong><span>ডেলিভারি সম্পন্ন</span></div><div class="order-stat"><strong>${cancelled}</strong><span>বাতিল</span></div><div class="order-stat"><strong>${mine.reduce((sum,o)=>sum+Number(o.total||0),0).toLocaleString('en-BD')}</strong><span>মোট অর্ডার মূল্য (৳)</span></div></div><b>আপনার অর্ডারসমূহ</b>${mine.map(o=>{const st=statusOf(o);const date=o.createdAt?new Date(o.createdAt).toLocaleDateString('bn-BD'):'তারিখ নেই';return `<div class="my-order-row"><div><b>${safe(o.orderId||'অর্ডার')}</b><small>${safe(date)} · ${money(o.total)}</small></div><span class="status-pill ${st==='pending'?'status-pending':st==='cancelled'?'status-cancelled':'status-confirmed'}">${safe(label(st))}</span></div>`;}).join('')}`;
+ }catch(err){console.error('[Style Zone Bd] Customer order summary failed:',err);result.textContent='অর্ডারের হিসাব আনা যাচ্ছে না। পরে আবার চেষ্টা করুন।';}
+ finally{btn.disabled=false;}
+};
+onValue(ref(db,'settings'),snap=>applySiteSettings(snap.val()||{}),err=>console.warn('[Style Zone Bd] Settings read failed',err));
+window.toggleMenu=()=>document.getElementById('mainMenu').classList.toggle('open');
+window.slideBenefits=direction=>{const track=document.getElementById('benefitsTrack');if(track){const card=track.querySelector('.benefit');track.scrollBy({left:direction*(card?card.getBoundingClientRect().width+12:260),behavior:'smooth'});}};
+window.showOrderTracking=()=>{
+ const section=document.getElementById('orderTracking');
+ if(section){section.hidden=false;section.scrollIntoView({behavior:'smooth',block:'start'});}
+ window.closeMenu();
+};
+window.closeMenu=()=>document.getElementById('mainMenu').classList.remove('open');
+
+function imageOf(p){
+  if(!p || typeof p !== 'object') return '';
+  const imgs = Array.isArray(p.images) ? p.images : [];
+  return imgs.find(x => typeof x === 'string' && x.trim()) || p.image || p.photo || '';
+}
+function normalizeProduct(id, raw){
+  const p = raw && typeof raw === 'object' ? raw : {};
+  return {
+    ...p,
+    id: String(id),
+    name: String(p.name || p.title || p.productName || 'প্রোডাক্ট'),
+    price: Number(p.price ?? p.salePrice ?? p.regularPrice ?? 0),
+    oldPrice: Number(p.oldPrice ?? p.compareAtPrice ?? 0),
+    category: String(p.category || p.cat || 'অন্যান্য'),
+    stock: p.stock ?? p.quantity ?? p.inventory ?? p.availableStock ?? p.stockCount ?? p.inStock ?? null,
+    description: String(p.description || p.details || ''),
+    sizes: Array.isArray(p.sizes) ? p.sizes : (typeof p.sizes === 'string' ? p.sizes.split(',').map(s=>s.trim()).filter(Boolean) : [])
+  };
+}
+function showProductMessage(message, detail=''){
+  const root=document.getElementById('products');
+  if(!root) return;
+  const loading=/লোড হচ্ছে/.test(message);
+  root.innerHTML=loading?`<div class="loading" style="grid-column:1/-1"><span class="loading-spinner"></span><span><b>${safe(message)}</b>${detail?`<br><small>${safe(detail)}</small>`:''}</span></div>`:`<div class="empty"><b>${safe(message)}</b>${detail?`<br><small>${safe(detail)}</small>`:''}</div>`;
+}
+function buildCategoryFilters(){
+  const cats=[...new Set(allProducts.map(p=>p.category).filter(Boolean))];
+  const root=document.getElementById('filters');
+  if(!root) return;
+  root.innerHTML='<button class="filter active" data-cat="all">ALL</button>'+cats.map(cat=>`<button class="filter" data-cat="${safe(cat)}">${safe(cat)}</button>`).join('');
+  root.querySelectorAll('[data-cat]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      activeCategory=btn.dataset.cat || 'all';
+      root.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b===btn));
+      renderProducts();
+    });
+  });
+  if(activeCategory!=='all'&&!cats.includes(activeCategory)) activeCategory='all';
+}
+function renderProducts(){
+  const q=(document.getElementById('topSearchInput')?.value||document.getElementById('searchInput')?.value||'').trim().toLowerCase();
+  const list=allProducts.filter(p=>
+    (activeCategory==='all'||p.category===activeCategory) &&
+    (!q || p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q))
+  );
+  const root=document.getElementById('products');
+  if(!root) return;
+  if(!list.length){
+    showProductMessage(allProducts.length ? 'এই ক্যাটাগরিতে কোনো প্রোডাক্ট নেই।' : 'এখনো কোনো প্রোডাক্ট লোড হয়নি।',
+      allProducts.length ? 'Sayem Ahmed ' : 'Stly Zone Bd');
+    return;
+  }
+  root.innerHTML=list.map(p=>{
+    const img=imageOf(p);
+    return `<article class="product" data-product-id="${safe(p.id)}">
+      <div class="product-photo">${img?`<img src="${safe(img)}" alt="${safe(p.name)}" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;placeholder&quot;>👕</div>')">`:'<div class="placeholder"><i class="fa-solid fa-shirt"></i></div>'}
+      ${`<span class="stock-chip">${p.stock!==undefined&&p.stock!==null?(Number(p.stock)>0?`স্টক: ${Number(p.stock)}`:'স্টক শেষ'):'স্টক তথ্য নেই'}</span>`}<button class="quick" type="button">VIEW PRODUCT</button></div>
+      <div class="product-info"><h3>${safe(p.name)}</h3><div class="price">${money(p.price)} ${p.oldPrice?`<span class="old">${money(p.oldPrice)}</span>`:''}</div><div class="desc">${safe(p.description.slice(0,75))}</div></div>
+    </article>`;
+  }).join('');
+  root.querySelectorAll('[data-product-id]').forEach(card=>{
+    card.addEventListener('click',()=>window.openProduct(card.dataset.productId));
+  });
+  applyButtonLabels(settings.buttonLabels||{});
+}
+let productsListenerStarted=false;
+function startProductsListener(){
+  if(productsListenerStarted) return;
+  productsListenerStarted=true;
+  // Render the last successful product snapshot immediately while Firebase refreshes.
+  try{
+    const cached=localStorage.getItem('stylezonebd_products_cache');
+    if(cached){
+      const parsed=JSON.parse(cached);
+      if(Array.isArray(parsed)&&parsed.length){allProducts=parsed;buildCategoryFilters();renderProducts();}
+    }
+  }catch(e){console.warn('[Style Zone Bd] Product cache unavailable',e);}
+  if(!allProducts.length){
+    const root=document.getElementById('products');
+    if(root)root.innerHTML='<div class="loading-skeleton" style="grid-column:1/-1">'+Array.from({length:4},()=>'<div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>').join('')+'</div>';
+  }
+  try{
+    onValue(ref(db,'products'),snap=>{
+      const data=snap.val();
+      if(!data || typeof data!=='object'){
+        allProducts=[];
+        buildCategoryFilters();
+        renderProducts();
+        return;
+      }
+      allProducts=Object.entries(data)
+        .filter(([,value])=>value && typeof value==='object')
+        .map(([id,value])=>normalizeProduct(id,value))
+        .reverse();
+      try{localStorage.setItem('stylezonebd_products_cache',JSON.stringify(allProducts));}catch(e){console.warn('[Style Zone Bd] Could not cache products',e);}
+      buildCategoryFilters();
+      renderProducts();
+      console.info('[Style Zone Bd] Products loaded:',allProducts.length);
+    },err=>{
+      console.error('[Style Zone Bd] Firebase products read failed:',err);
+      showProductMessage('প্রোডাক্ট লোড করা যায়নি',err?.message || 'Firebase read permission বা connection সমস্যা।');
+    });
+  }catch(err){
+    console.error('[Style Zone Bd] Products listener error:',err);
+    showProductMessage('প্রোডাক্ট লোড করা যায়নি',err?.message || 'JavaScript/Firebase initialization সমস্যা।');
+  }
+}
+startProductsListener();
+window.focusSearch=()=>{const top=document.getElementById('topSearchInput');if(top){top.focus();top.scrollIntoView({behavior:'smooth',block:'nearest'});}};
+window.openProduct=id=>{
+ const p=allProducts.find(x=>x.id===id);if(!p)return;
+ selectedProduct=p;selectedSize='';selectedImageIndex=0;
+ const imgs=(p.images&&p.images.length?p.images:[p.image]).filter(Boolean).slice(0,3);
+ const sizes=Array.isArray(p.sizes)?p.sizes:[];
+ document.getElementById('productModalContent').innerHTML=`<div class="product-detail"><div><div class="gallery-stage"><div class="detail-img" id="detailSwipeArea">${imgs.length?`<img id="detailImage" src="${safe(imgs[0])}" alt="${safe(p.name)}" onclick="openImageZoom(this.src)">`:'<div class="placeholder">👕</div>'}</div>${imgs.length>1?`<button class="gallery-arrow prev" type="button" onclick="slideProductImage(-1)" aria-label="আগের ছবি"><i class="fa-solid fa-chevron-left"></i></button><button class="gallery-arrow next" type="button" onclick="slideProductImage(1)" aria-label="পরের ছবি"><i class="fa-solid fa-chevron-right"></i></button><span class="gallery-count" id="galleryCount">1 / ${imgs.length}</span>`:''}</div>${imgs.length>1?`<div class="gallery-label" style="padding:0 12px">ছবি সরিয়ে দেখুন · পছন্দের ছবিটি অর্ডারে যুক্ত হবে</div><div class="detail-thumbs">${imgs.map((im,i)=>`<button type="button" class="detail-thumb ${i===0?'active':''}" onclick="chooseProductImage(${i},this)"><img src="${safe(im)}" alt="প্রোডাক্ট ছবি ${i+1}"></button>`).join('')}</div>`:''}</div><div class="detail-copy"><h2>${safe(p.name)}</h2><div class="detail-stock ${p.stock!==undefined&&p.stock!==null&&Number(p.stock)<=0?'out':''}">${p.stock!==undefined&&p.stock!==null?(Number(p.stock)>0?`স্টকে আছে: ${Number(p.stock)} টি`:'স্টক শেষ'):'স্টকের তথ্য পাওয়া যায়নি'}</div><div class="price">${money(p.price)} ${p.oldPrice?`<span class="old">${money(p.oldPrice)}</span>`:''}</div><p>${safe(p.description||'')}</p>${sizes.length?`<b style="font-size:11px">SELECT SIZE</b><div class="sizes">${sizes.map(s=>`<button class="size" onclick="chooseSize('${safe(s)}',this)">${safe(s)}</button>`).join('')}</div>`:''}<button class="primary wide" onclick="addToCartFromDetail('${p.id}')">ADD TO BAG</button></div></div>`;
+ document.getElementById('productModal').classList.add('show');
+ const area=document.getElementById('detailSwipeArea');
+ if(area&&imgs.length>1){let sx=0,sy=0;area.addEventListener('touchstart',e=>{sx=e.changedTouches[0].clientX;sy=e.changedTouches[0].clientY},{passive:true});area.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy))window.slideProductImage(dx<0?1:-1)},{passive:true});}
+};
+window.closeProduct=()=>document.getElementById('productModal').classList.remove('show');
+window.openImageZoom=src=>{document.getElementById('zoomedImage').src=src;document.getElementById('imageZoom').classList.add('show')};
+window.closeImageZoom=()=>document.getElementById('imageZoom').classList.remove('show');
+window.chooseProductImage=(i,el)=>{
+ const p=selectedProduct;if(!p)return;const imgs=(p.images&&p.images.length?p.images:[p.image]).filter(Boolean).slice(0,3);
+ selectedImageIndex=Math.max(0,Math.min(i,imgs.length-1));
+ const main=document.getElementById('detailImage');if(main&&imgs[selectedImageIndex])main.src=imgs[selectedImageIndex];
+ document.querySelectorAll('.detail-thumb').forEach((b,index)=>b.classList.toggle('active',index===selectedImageIndex));
+ const count=document.getElementById('galleryCount');if(count)count.textContent=(selectedImageIndex+1)+' / '+imgs.length;
+};
+window.slideProductImage=delta=>{const thumbs=[...document.querySelectorAll('.detail-thumb')];if(!thumbs.length)return;const next=(selectedImageIndex+delta+thumbs.length)%thumbs.length;window.chooseProductImage(next,thumbs[next]);};
+window.chooseSize=(s,el)=>{selectedSize=s;el.parentElement.querySelectorAll('.size').forEach(b=>b.classList.remove('active'));el.classList.add('active')};window.addToCartFromDetail=id=>{const p=allProducts.find(x=>x.id===id);if(!p)return;if(Array.isArray(p.sizes)&&p.sizes.length&&!selectedSize){toast('একটি সাইজ নির্বাচন করুন');return}addCart(p,selectedSize,selectedImageIndex);closeProduct();openCart()};
+function saveCart(){localStorage.setItem('stylezonebd_cart',JSON.stringify(cart));renderCartCount()}function addCart(p,size,imageIndex=0){const imgs=(p.images&&p.images.length?p.images:[p.image]).filter(Boolean).slice(0,3);const chosenImage=imgs[imageIndex]||imageOf(p);const key=p.id+'_'+(size||'')+'_img'+imageIndex;const old=cart.find(x=>x.key===key);if(old)old.qty++;else cart.push({key,id:p.id,name:p.name,price:Number(p.price),image:chosenImage,imageIndex,size:size||'',qty:1,codEnabled:p.codEnabled!==false});saveCart();toast('কার্টে যোগ হয়েছে')}
+function renderCartCount(){const n=cart.reduce((s,x)=>s+x.qty,0);document.getElementById('cartCount').textContent=n;document.getElementById('drawerCount').textContent=n}function subtotal(){return cart.reduce((s,x)=>s+x.price*x.qty,0)}
+function renderCart(){const root=document.getElementById('cartItems');if(!cart.length){root.innerHTML='<div class="empty">আপনার ব্যাগ এখনো খালি।</div>'}else root.innerHTML=cart.map(x=>`<div class="cart-row"><img src="${safe(x.image)}" alt="${safe(x.name)}"><div><h4>${safe(x.name)}</h4><p>${x.size?'Size: '+safe(x.size)+' · ':''}${money(x.price)}</p><div class="qty"><button onclick="changeQty('${x.key}',-1)">−</button><span>${x.qty}</span><button onclick="changeQty('${x.key}',1)">+</button></div></div><button class="remove" onclick="removeCart('${x.key}')"><i class="fa-solid fa-trash"></i></button></div>`).join('');document.getElementById('cartSubtotal').textContent=money(subtotal());renderCartCount()}
+window.openCart=()=>{renderCart();document.getElementById('overlay').classList.add('show');document.getElementById('cartDrawer').classList.add('show')};window.closeCart=()=>{document.getElementById('overlay').classList.remove('show');document.getElementById('cartDrawer').classList.remove('show')};window.changeQty=(key,delta)=>{const x=cart.find(i=>i.key===key);if(!x)return;x.qty+=delta;if(x.qty<1)cart=cart.filter(i=>i.key!==key);saveCart();renderCart()};window.removeCart=key=>{cart=cart.filter(i=>i.key!==key);saveCart();renderCart()};
+let currentDelivery=0;window.startCheckout=()=>{if(!cart.length){toast('আপনার কার্ট খালি');return}closeCart();const codOption=document.querySelector('#cPayment option[value="COD"]');const codAllowed=cart.every(item=>item.codEnabled!==false);if(codOption){codOption.disabled=!codAllowed;codOption.hidden=!codAllowed;}if(!codAllowed&&document.getElementById('cPayment').value==='COD')document.getElementById('cPayment').value='bKash';document.getElementById('checkoutSubtotal').textContent=money(subtotal());document.getElementById('cDelivery').value='';currentDelivery=0;document.getElementById('checkoutDelivery').textContent=money(0);document.getElementById('checkoutTotal').textContent=money(subtotal());document.getElementById('cPayment').dispatchEvent(new Event('change'));document.getElementById('checkoutModal').classList.add('show')};window.closeCheckout=()=>document.getElementById('checkoutModal').classList.remove('show');
+document.getElementById('cDelivery').addEventListener('change',e=>{currentDelivery=e.target.value==='inside'?Number(settings.insideDhaka??70):e.target.value==='outside'?Number(settings.outsideDhaka??120):0;document.getElementById('checkoutDelivery').textContent=money(currentDelivery);document.getElementById('checkoutTotal').textContent=money(subtotal()+currentDelivery);document.getElementById('cPayment').dispatchEvent(new Event('change'))});
+window.copyPayNumber=async n=>{if(!n){toast('নম্বর সেট করা নেই');return}try{await navigator.clipboard.writeText(String(n));toast('নম্বর কপি হয়েছে')}catch(_){const t=document.createElement('textarea');t.value=String(n);document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();toast('নম্বর কপি হয়েছে')}};
+function payNumberCard(label,number){return `<div class="pay-number-card"><div><small>${label}</small><strong>${safe(number||'নম্বর সেট করা নেই')}</strong></div>${number?`<button type="button" onclick="copyPayNumber('${safe(number)}')"><i class="fa-regular fa-copy"></i> কপি</button>`:''}</div>`}
+document.getElementById('cPayment').addEventListener('change',e=>{const method=e.target.value;document.getElementById('txnField').style.display='block';const bk=settings.bkashNumber||'',ng=settings.nagadNumber||'',num=method==='bKash'?bk:ng;const box=document.getElementById('paymentNote');box.innerHTML=method==='COD'?`<b>Cash on Delivery</b><br>শুধু ডেলিভারি চার্জ ${money(currentDelivery)} আগে পরিশোধ করুন। পণ্যের বাকি মূল্য হাতে পেয়ে দেবেন।<div class="pay-number-list">${payNumberCard('বিকাশ',bk)}${payNumberCard('নগদ',ng)}</div><small>পেমেন্টের Transaction ID নিচে লিখুন।</small>`:`<b>${method} পেমেন্ট</b><br>নিচের নম্বরে পেমেন্ট করুন। এরপর Transaction ID দিন।<div class="pay-number-list">${payNumberCard(method,num)}</div>`});
+document.getElementById('checkoutForm').addEventListener('submit',async e=>{e.preventDefault();if(!cart.length){toast('কার্ট খালি');return}const btn=document.getElementById('placeOrderBtn');const method=document.getElementById('cPayment').value;if(method==='COD'&&cart.some(item=>item.codEnabled===false)){toast('এই কার্টের কিছু পণ্যে Cash on Delivery নেই। বিকাশ/নগদ নির্বাচন করুন।');return}const txn=document.getElementById('cTxn').value.trim();if(!txn){toast(method==='COD'?'ডেলিভারি চার্জ অগ্রিম পরিশোধের Transaction ID দিন':'Transaction ID দিন');return}btn.disabled=true;btn.textContent='PLEASE WAIT...';const orderId='RA'+Date.now().toString().slice(-9);const deliveryType=document.getElementById('cDelivery').value==='inside'?'Inside Dhaka':'Outside Dhaka';const sub=subtotal();const order={orderId,customerId,name:document.getElementById('cName').value.trim(),phone:document.getElementById('cPhone').value.trim(),division:document.getElementById('cDivision').value,district:document.getElementById('cDistrict').value.trim(),thana:document.getElementById('cThana').value.trim(),address:document.getElementById('cAddress').value.trim(),deliveryType,deliveryCharge:currentDelivery,subtotal:sub,total:sub+currentDelivery,paymentMethod:method==='COD'?'COD (Delivery charge prepaid)':'Prepaid '+method,deliveryChargePayment:method==='COD'?'Prepaid':'Included in full payment',transactionId:txn,items:cart.map(({id,name,price,image,imageIndex,size,qty})=>({id,name,price,image,imageIndex,size,qty})),status:'pending',telegramNotificationStatus:'queued',createdAt:new Date().toISOString()};try{
+  await set(push(ref(db,'orders')),order);
+  try{const customerRef=ref(db,'customerIds/'+customerId);const customerSnap=await get(customerRef);const previous=customerSnap.val()||{customerId,createdAt:new Date().toISOString(),device:'web'};await set(customerRef,{...previous,name:order.name,phone:order.phone,lastOrderAt:order.createdAt});}catch(customerErr){console.warn('[Style Zone Bd] Customer profile update skipped:',customerErr);}
+  cart=[];saveCart();closeCheckout();e.target.reset();
+  const section=document.getElementById('orderTracking');
+  const result=document.getElementById('trackingResult');
+  document.getElementById('trackOrderId').value=orderId;
+  document.getElementById('trackPhone').value=order.phone;
+  result.innerHTML=`<div class="order-success-title"><i class="fa-solid fa-circle-check"></i> অর্ডার সফলভাবে গ্রহণ করা হয়েছে</div><div class="order-id-row"><div><b>আপনার Order ID:</b> <strong>${safe(orderId)}</strong></div><button type="button" class="copy-order-btn" onclick="copyOrderId('${safe(orderId)}')"><i class="fa-regular fa-copy"></i> ID কপি করুন</button></div><div><b>স্ট্যাটাস:</b> <span class="status-pill status-pending">কনফার্মেশনের অপেক্ষায়</span></div><div><b>মোট:</b> ${money(order.total)}</div><p class="order-help">অর্ডারটি কনফার্ম হয়েছে কি না জানতে Menu থেকে “অর্ডার স্ট্যাটাস” খুলে Order ID ও মোবাইল নম্বর দিয়ে যাচাই করুন।</p>`;
+  section.hidden=false;section.scrollIntoView({behavior:'smooth',block:'start'});
+  toast('অর্ডার সফলভাবে গ্রহণ করা হয়েছে!');
+}catch(err){console.error(err);toast('অর্ডার করা যায়নি। আবার চেষ্টা করুন।')}finally{btn.disabled=false;btn.textContent='PLACE ORDER'}});
+document.getElementById('year').textContent=new Date().getFullYear();renderCartCount();
+</script>
+</body></html>
+<style>
+/* Final requested polish: keep every hero line visible and elevate product details. */
+.hero-inner{height:auto;max-height:none;min-height:280px;align-items:stretch}
+.hero-copy{min-width:0;overflow:visible;padding:clamp(22px,4vw,42px) clamp(18px,5vw,58px)}
+.hero .eyebrow{display:block;max-width:100%;font-size:clamp(8px,1vw,10px);line-height:1.5;letter-spacing:1.4px;overflow-wrap:anywhere}
+.hero h1{max-width:100%;font-size:clamp(28px,4.2vw,50px);line-height:1.12;letter-spacing:-1.4px;overflow-wrap:anywhere}
+.hero p{max-width:100%;font-size:clamp(11px,1.15vw,13px);line-height:1.65;overflow-wrap:anywhere}
+.hero-art{min-width:0;min-height:280px;height:100%}
+#productModal{backdrop-filter:blur(7px);background:rgba(20,17,14,.62);padding:20px}
+#productModal .modal-box{width:min(920px,100%);max-height:92vh;border:1px solid rgba(255,255,255,.55);border-radius:24px;background:#fffdfa;box-shadow:0 30px 100px rgba(0,0,0,.32);scrollbar-width:thin}
+#productModal .modal-close{top:14px;right:14px;width:40px;height:40px;background:rgba(255,255,255,.96);border:1px solid #eee4d8;box-shadow:0 5px 18px #00000015;font-size:22px}
+#productModal .product-detail{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:0;align-items:stretch}
+#productModal .gallery-stage{padding:18px 12px 0;position:relative}
+#productModal .detail-img{min-height:480px;height: min(65vh,620px);margin:0;border-radius:18px;background:linear-gradient(145deg,#f8f5ef,#eee8df);display:grid;place-items:center}
+#productModal .detail-img img{min-height:0;height:100%;max-height:100%;object-fit:contain;padding:12px}
+#productModal .gallery-arrow{width:42px;height:42px;background:#fff;border:1px solid #eee2d5;box-shadow:0 6px 20px #00000018}
+#productModal .gallery-arrow.prev{left:25px}#productModal .gallery-arrow.next{right:25px}
+#productModal .gallery-count{bottom:16px;right:25px;padding:7px 12px}
+#productModal .gallery-label{padding:12px 20px 0!important;color:#8b765e}
+#productModal .detail-thumbs{padding:12px 18px 20px;gap:10px}
+#productModal .detail-thumb{width:68px;height:78px;border:1px solid #e9dfd3;border-radius:11px;padding:3px;background:#fff;opacity:.75}
+#productModal .detail-thumb.active{border:2px solid #a77b4e;opacity:1}
+#productModal .detail-copy{padding:58px 34px 34px;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+#productModal .detail-copy h2{font-size:clamp(22px,2.4vw,30px);line-height:1.25;color:#211b15;margin:0 0 14px;overflow-wrap:anywhere}
+#productModal .detail-stock{font-size:11px;padding:8px 13px;border:1px solid #dcecdf}
+#productModal .detail-copy .price{font-size:18px;padding:10px 15px;margin:2px 0 12px;border-radius:12px}
+#productModal .detail-copy p{font-size:13px;line-height:1.85;color:#766b60;white-space:pre-line;overflow-wrap:anywhere;margin:8px 0 18px}
+#productModal .detail-copy> b{font-size:10px!important;letter-spacing:1.5px;color:#8b765e}
+#productModal .sizes{gap:9px;margin:12px 0 22px}
+#productModal .size{min-width:43px;border-radius:10px;padding:11px 14px;border-color:#e6ddd2;font-weight:700}
+#productModal .size.active{background:#211b15;border-color:#211b15}
+#productModal .detail-copy .wide{margin-top:auto;min-height:50px;border-radius:12px;background:linear-gradient(110deg,#17130f,#57432e);border:0;box-shadow:0 10px 22px #4c39251f;letter-spacing:1.1px}
+#productModal .detail-copy .wide:hover{background:#382a1d}
+@media(max-width:700px){
+ .hero{margin:10px auto 18px;padding:0 12px}
+ .hero-inner{grid-template-columns:minmax(0,1fr) minmax(105px,.58fr)!important;grid-template-rows:auto!important;min-height:0!important;max-height:none!important;height:auto;border-radius:16px}
+ .hero-copy{padding:15px 12px!important;justify-content:center;gap:1px}
+ .hero .eyebrow{font-size:7px;line-height:1.4;letter-spacing:.55px;margin-bottom:3px}
+ .hero h1{font-size:clamp(18px,5.6vw,25px)!important;line-height:1.13!important;letter-spacing:-.65px!important;margin:4px 0 6px!important}
+ .hero p{display:block!important;font-size:clamp(9px,2.7vw,11px)!important;line-height:1.5!important;margin:0!important;max-width:100%;color:#625b53}
+ .hero-art{height:auto;min-height:100%!important;align-self:stretch}
+ .hero-art img{height:100%;min-height:150px;object-fit:cover}
+ #productModal{padding:8px;align-items:flex-end}
+ #productModal .modal-box{width:100%;max-height:94vh;border-radius:22px 22px 14px 14px}
+ #productModal .product-detail{grid-template-columns:1fr;grid-template-rows:auto auto}
+ #productModal .gallery-stage{padding:9px 9px 0}
+ #productModal .detail-img{height: min(43vh,370px);min-height:230px;max-height:370px;border-radius:15px}
+ #productModal .detail-img img{height:100%;min-height:0;max-height:100%;padding:8px}
+ #productModal .gallery-arrow{width:36px;height:36px}
+ #productModal .gallery-arrow.prev{left:17px}#productModal .gallery-arrow.next{right:17px}
+ #productModal .gallery-count{right:17px;bottom:12px}
+ #productModal .gallery-label{padding:9px 12px 0!important;font-size:9px}
+ #productModal .detail-thumbs{padding:9px 12px 5px;gap:8px}
+ #productModal .detail-thumb{width:55px;height:62px}
+ #productModal .detail-copy{padding:16px 18px 20px}
+ #productModal .detail-copy h2{font-size:21px;margin:0 0 9px}
+ #productModal .detail-copy .price{font-size:16px;margin:1px 0 8px}
+ #productModal .detail-copy p{font-size:12px;line-height:1.7;margin:6px 0 12px}
+ #productModal .sizes{margin:9px 0 15px}
+ #productModal .detail-copy .wide{position:sticky;bottom:0;width:100%;min-height:48px;margin-top:12px}
+}
+@media(max-width:360px){.hero-inner{grid-template-columns:minmax(0,1fr) minmax(92px,.52fr)!important}.hero-copy{padding:12px 9px!important}.hero .eyebrow{font-size:6px}.hero h1{font-size:18px!important}.hero p{font-size:9px!important}}
+</style>
+
+
+<style id="stylezone-fullscreen-product-fix">
+/* Instant tap feedback + immersive full-screen product page */
+html,body{ -webkit-tap-highlight-color:transparent; }
+.product,.product *,.quick,.benefit-arrow{ -webkit-tap-highlight-color:transparent; }
+.product:active{transform:none!important;box-shadow:none!important}
+.product-photo img{transition:transform .22s ease!important}
+#productModal{position:fixed!important;inset:0!important;padding:0!important;align-items:stretch!important;justify-content:stretch!important;background:#fff!important;backdrop-filter:none!important;z-index:120!important;}
+#productModal .modal-box{width:100%!important;height:100dvh!important;max-height:100dvh!important;min-height:100vh!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow-y:auto!important;overscroll-behavior:contain;background:#fffdfa!important;padding-bottom:env(safe-area-inset-bottom,0px)}
+#productModal .product-detail{min-height:100%;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;align-items:start!important}
+#productModal .gallery-stage{padding:20px 16px 0!important}
+#productModal .detail-img{height:min(72vh,760px)!important;min-height:360px!important;max-height:none!important;border-radius:18px!important}
+#productModal .detail-copy{padding:76px 34px 34px!important;min-height:100%;}
+#productModal .modal-close{position:fixed!important;top:calc(env(safe-area-inset-top,0px) + 12px)!important;left:14px!important;right:auto!important;z-index:130!important;width:42px!important;height:42px!important;border-radius:50%!important;background:#fff!important;border:1px solid #e9dfd3!important;box-shadow:0 5px 18px #0002!important;font-size:24px!important}
+#productModal .modal-box{scrollbar-width:none}#productModal .modal-box::-webkit-scrollbar{display:none}
+#productModal .detail-copy .wide{position:sticky;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);width:100%;}
+#productModal .detail-img img{cursor:zoom-in}
+@media(max-width:700px){
+ #productModal .product-detail{grid-template-columns:1fr!important;grid-template-rows:auto auto!important}
+ #productModal .gallery-stage{padding:66px 12px 0!important}
+ #productModal .detail-img{height:min(52vh,480px)!important;min-height:250px!important;max-height:none!important;border-radius:16px!important}
+ #productModal .detail-copy{padding:20px 18px calc(28px + env(safe-area-inset-bottom,0px))!important;min-height:0}
+ #productModal .detail-copy h2{font-size:23px!important}
+ #productModal .detail-copy p{font-size:13px!important;line-height:1.75!important}
+ #productModal .detail-thumbs{padding:10px 12px 6px!important}
+ #productModal .detail-copy .wide{position:sticky;bottom:calc(env(safe-area-inset-bottom,0px) + 8px)!important}
+}
+@media(prefers-reduced-motion:reduce){#productModal *, .product-photo img{transition:none!important;animation:none!important}}
+</style>
+<script id="stylezone-back-navigation-fix">
+(()=>{
+ const $=id=>document.getElementById(id);
+ const original={
+  openProduct:window.openProduct, closeProduct:window.closeProduct,
+  openImageZoom:window.openImageZoom, closeImageZoom:window.closeImageZoom,
+  openCart:window.openCart, closeCart:window.closeCart,
+  startCheckout:window.startCheckout, closeCheckout:window.closeCheckout
+ };
+ let internalTransition=false, handlingPop=false;
+ const stateName=()=>history.state&&history.state.styleZoneView;
+ const pushView=name=>{history.pushState({...(history.state||{}),styleZoneView:name},'',location.href)};
+ const backOrClose=(name,close)=>{
+  if(stateName()===name&&!handlingPop){history.back();return;}
+  close?.();
+ };
+ // Keep a root history entry so Android's Back key returns within the storefront.
+ if(!stateName()) history.replaceState({...(history.state||{}),styleZoneRoot:true},'',location.href);
+ window.openProduct=id=>{original.openProduct(id);if($('productModal')?.classList.contains('show'))pushView('product');};
+ window.closeProduct=()=>backOrClose('product',original.closeProduct);
+ window.openImageZoom=src=>{original.openImageZoom(src);pushView('imageZoom');};
+ window.closeImageZoom=()=>backOrClose('imageZoom',original.closeImageZoom);
+ window.openCart=()=>{original.openCart();pushView('cart');};
+ window.closeCart=()=>{if(internalTransition){original.closeCart();return;}backOrClose('cart',original.closeCart);};
+ window.startCheckout=()=>{internalTransition=true;try{original.startCheckout();}finally{internalTransition=false;}if($('checkoutModal')?.classList.contains('show'))pushView('checkout');};
+ window.closeCheckout=()=>backOrClose('checkout',original.closeCheckout);
+ window.addEventListener('popstate',()=>{
+  handlingPop=true;
+  try{
+   if($('imageZoom')?.classList.contains('show')) original.closeImageZoom();
+   else if($('checkoutModal')?.classList.contains('show')) original.closeCheckout();
+   else if($('productModal')?.classList.contains('show')) original.closeProduct();
+   else if($('cartDrawer')?.classList.contains('show')) original.closeCart();
+   else {history.pushState({styleZoneRoot:true},'',location.href);}
+  }finally{handlingPop=false;}
+ });
+ // Remove the browser's blue tap flash and prevent product cards from briefly focusing.
+ document.addEventListener('pointerdown',e=>{const card=e.target.closest?.('.product');if(card)card.style.outline='none';},{passive:true});
+})();
+</script>
